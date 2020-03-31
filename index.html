@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<title>Yoshi's Adventure  (AKA Legend of Zora) (Bootleg/Knockoff/ROM Hack of HTML5 Game)</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+   @font-face { 
+	font-weight: normal;
+font-family: 'Egelston'; 
+src: url("waYoshi.ttf");
+}
+body{
+	font-weight: normal;
+	font-family: 'Egelston'; 
+}
+
+
+
+</style>
+        <!-- jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+        <!--- My Style Sheet -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Javascript -->
+		<script src="js/main.js"></script>
+		
+		<script src="js/obj/character.js"></script>
+		<script src="js/obj/obstacle.js"></script>
+		<script src="js/obj/npc.js"></script>
+		<script src="js/obj/monster.js"></script>
+		<script src="js/obj/event.js"></script>
+		<script src="js/obj/cursor.js"></script>
+		<script src="js/obj/item.js"></script>
+		<script src="js/obj/chest.js"></script>
+		<script src="js/obj/warpTarget.js"></script>
+		<script src="js/obj/fade.js"></script>
+		<script src="js/obj/textParticle.js"></script>
+		<script src="js/obj/cyclical.js"></script>
+		<script src="js/obj/door.js"></script>
+		<script src="js/obj/drop.js"></script>
+		
+		<script src="js/inv/itemController.js"></script>
+		<script src="js/inv/shopController.js"></script>
+		
+		<script src="js/battle/bestiary.js"></script>
+		<script src="js/battle/attack.js"></script>
+		
+		<script src="js/dia/dialogue.js"></script>
+		<script src="js/dia/diaCallback.js"></script>
+		<script src="js/dia/diaRef.js"></script>
+		
+        <script src="js/scenes/sceneController.js"></script>
+		<script src="js/scenes/mapRef.js"></script>
+		<script src="js/scenes/mapController.js"></script>
+        
+        <script src="js/scenes/ref/startMenu.js"></script>
+        <script src="js/scenes/ref/gameOver.js"></script>
+        <script src="js/scenes/ref/menu.js"></script>
+        <script src="js/scenes/ref/shop.js"></script>
+		
+		<script src="js/movement.js"></script>
+		<script src="js/collision.js"></script>
+		<script src="js/size.js"></script>
+
+    </head>
+
+    <body onload="startGame()">
+<!--	<p id="output"></p></body>-->
+</html>
+<audio src = "Pandemonium Castle (Final Fantasy Legend II, SMW Soundfont).mp3"  loop id = "myaudio" autoplay></audio>
+<audio src = "Cantina (Star Wars Episode VII A New Hope, SMW Soundfont).wav" loop id = "shop" autoplay></audio>
+<audio src = "Last Battle (Romancing SaGa 2, SMW Soundfont).wav" loop id = "Thomas" autoplay></audio>
+<audio src = "Karakuri Spirits (Mamorukun Curse, SMW and Yoshi's Island Soundfont).wav" loop id = "Mountain" autoplay></audio>
+<audio src = "Go Red Team, Go White Team (Treasure Hunter G, SMW Soundfont).mp3" loop id = "menu" autoplay></audio>
+<audio src = "Boss (Mario Is Missing, SMW Soundfont).m4a" loop id = "Boss" autoplay></audio>
+<script>
+        var audio = document.getElementById("myaudio");
+		audio.volume = 0.0; audio.currentTime = 0;
+		var audio = document.getElementById("shop");
+		audio.volume = 0.0; audio.currentTime = 0;
+		var audio = document.getElementById("menu");
+		audio.volume = 0.0; audio.currentTime = 0;
+		var audio = document.getElementById("Boss");
+		audio.volume = 0.0; audio.currentTime = 0;
+		var audio = document.getElementById("Thomas");
+		audio.volume = 0.0; audio.currentTime = 0;
+
+		var audio = document.getElementById("Mountain");
+		audio.volume = 0.0; audio.currentTime = 0;
+
+
+		
+function updateScene_gameOver(){
+	ctx.font = "42px  Egelston";
+	ctx.fillStyle = "black";
+	ctx.fillText("Game Over",200,100);
+}
+
+
+function restart(){
+	$("#mainCanvas").fadeOut(fadeTime, function(){
+		state = stateStart;
+		buildScenes(true)
+	
+		$("#mainCanvas").fadeIn(fadeTime);
+	});
+}
+
+function gameOver(){
+	$("#mainCanvas").fadeOut(fadeTime, function(){
+		state = stateGameOver;
+		buildScenes(true)
+	
+		$("#mainCanvas").fadeIn(fadeTime);
+	});
+}
+
+
+
+           function play_dat_sound() {
+	document.getElementById('audiotag1').play();
+	var audio = document.getElementById("myaudio");
+audio.volume = 0.0;
+	setTimeout(function(){ window.location.replace("index.html");}, 1000);
+  }
+
+</script>

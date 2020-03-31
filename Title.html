@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>Title</title>
+		<link rel="stylesheet" href="stylesheets/css/main.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.js"></script>
+		<script src="js/intro-debug.js"></script>
+	</head>
+	<style>
+		
+		body{
+			font-family: 'Toys R Us';     color:rgb(0, 0, 0);
+	background-color: rgb(0, 0, 0);
+		}
+		.replay {
+			padding: 5px;
+		}
+		@font-face { 
+
+font-family: 'Toys R Us'; 
+src: url("waYoshi.ttf");
+}
+		button {
+			display: block;
+			padding: 10px;
+			min-width: 100px;
+			font-size: 1.4em;
+			font-family: sans-serif;
+			border-radius: 15px;
+			margin-top: 5px;
+		}
+		
+		input {
+			font-size: 1.5em;
+		}
+		
+		.message {
+			margin: 10px 0;
+		}
+		a{
+color:transparent;
+font-family: 'Toys R Us'; 
+
+}    h2{ 
+color:rgb(0, 0, 0);
+			 font-size: 41px;
+			 font-weight: normal;
+		 }
+		 h1{  
+			color:green;
+			 font-size: 48px;
+			 font-weight: normal;
+			 font-family: 'Toys R Us'; 
+			bottom: 330px;
+		 }
+		 p{
+			color:rgb(0, 0, 0);
+			 font-size: 28px;
+			 font-weight: normal;
+			 font-family: 'Toys R Us'; 
+		 }
+
+	</style>
+	<body>
+
+			<div id="bg"></div>
+			<div id="main-title" class="main-logo">
+				<div id="subtitleTwo" class="subtitle">DJ STUDIO's</div>
+				<div id="mainTitle"> Yoshi's   Adventure</div>
+			
+			</div>
+		
+			<div class="overlay"></div>
+
+		
+			<div class="disclaimer">
+	<a href="javascript:play_dat_sound();"><h1> Press Space to Skip Intro/Proceed</h1></a>
+
+				<span>This game and code  &copy; 2019 DJ STUDIO.</span> <br>
+				<span> Music, sounds, game images &copy; Nintendo, Lucasfilm, Square Enix.</span>
+			</div>
+		
+			<audio id="audiotag1" src="nsmbwiiPressStart.wav" preload="auto"></audio>
+		
+		
+	</body>
+</html>
+
+<audio src = "Battle 2 (Xuanyuan Jian Canwaizhuan, SMW Soundfont).wav"  loop id = "myaudio" autoplay></audio>
+<Script>
+	var audio = document.getElementById("myaudio");
+	audio.volume = 0.0; audio.currentTime = 0;
+
+    document.addEventListener('keypress',function(){
+		var audio = document.getElementById("myaudio");
+	audio.volume = 0.0; audio.currentTime = 0;
+	document.getElementById('audiotag1').play();
+	setTimeout(function(){ window.location.replace("About the Game.html");}, 1000);
+});
+
+
+function blink() {
+   var f = document.getElementById('Foo');
+   setInterval(function() {
+      f.style.display = (f.style.display == 'none' ? '' : 'none');
+   }, 1000);
+}
+</Script>
+	
