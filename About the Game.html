@@ -15,7 +15,7 @@
                 @font-face { 
 
 font-family: 'Toys R Us'; 
-src: url("https://cdn.glitch.com/a3d322f7-5153-4f75-99b7-c68678b1c82b%2Fwayoshi.ttf?v=1585693686355");
+src: url("wayoshi.ttf");
 }
                 button {
                     display: block;
@@ -82,7 +82,6 @@ red Yoshi is your tutorial guide. <br><br>To control Yoshi, use the WASD buttons
 
              <a href="javascript:play_dat_sound();"><h1>Proceed</h1></a>
              <a href="javascript:play_bye_sound();"><h1> Go to Menu</h1></a>
-                              <a href="javascript:play_site_sound();"><h1> Go to DJ STUDIO's website</h1></a>
 <audio autoplay loop  id = "myaudio">
 <source src = "Cantina (Star Wars Episode VII A New Hope, SMW Soundfont).wav">
 </audio>
@@ -107,12 +106,7 @@ red Yoshi is your tutorial guide. <br><br>To control Yoshi, use the WASD buttons
                     audio.volume = 0.0;
                                              setTimeout(function(){ window.location.replace("Title.html");}, 1000);
                                            }
-                            function play_site_sound() {
-                                             document.getElementById('audiotag1').play();
-                                             var audio = document.getElementById("myaudio");
-                    audio.volume = 0.0;
-                                             setTimeout(function(){ window.location.replace("https://welcome-to-my-world.glitch.me/Login.html");}, 1000);
-                                           }
+                        
                                          </script>
         </body>
         </html>
