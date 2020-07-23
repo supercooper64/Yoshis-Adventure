@@ -64,6 +64,6 @@ A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game.
 
 - This is the first game to star Yoshi as a protagonist, likely in tribute to Alex Egelston.
 
-- Some of these mechanics, such as Tutorial yoshi, were later reused or based on in The Wizarding World of Yoshis, the second DJ STUDIO-developed, non-Nintendo licensed game to star Yoshi.
+- Some of these mechanics, such as Tutorial Yoshi, were later reused or based on in The Wizarding World of Yoshis, the second DJ STUDIO-developed, non-Nintendo licensed game to star Yoshi.
 
 
