@@ -66,4 +66,3 @@ A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game.
 
 - Some of these mechanics, such as Tutorial Yoshi, were later reused or based on in The Wizarding World of Yoshis, the second DJ STUDIO-developed, non-Nintendo licensed game to star Yoshi.
 
-
