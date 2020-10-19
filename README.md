@@ -1,6 +1,5 @@
 # Yoshi's Adventure Game (ROM HACK OF HTML5 Game)
-A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game, featuring music
-from Xuanyuan Jian Canwaizhuan:, Treasure Hunter G, Star Wars Episode VII: A New Hope, Romancing Saga 2 and Mamorukun Curse.
+A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game, featuring music from Xuanyuan Jian Canwaizhuan, Treasure Hunter G, Star Wars Episode VII: A New Hope, Romancing Saga 2 and Mamorukun Curse.
 
 # Differences from HTML5 Game
 - The game's layout is changed and/or modified.
