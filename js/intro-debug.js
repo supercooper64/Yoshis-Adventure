@@ -103,8 +103,7 @@ var runIntro = function(){
     // Used to delay the audio by 0.5 seconds.
   
     setTimeout(function(){
-      var audio = document.getElementById("myaudio");
-      audio.volume = 1.0; audio.currentTime = 0;
+
     }, 7000);
   };
 

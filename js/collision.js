@@ -43,8 +43,8 @@ function collision(r1, r2){
 				}else{
 					hitValue = r2.value;
 				}
-	
-				sfx.src = "music/Yoshi Ow.wav";
+		
+				sfx.src = "vc_yoshi_missfoot02.wav";
 				sfx.play();
 				if(player.equippedArmor.value >= hitValue){
 					hitValue = 0;
@@ -63,16 +63,7 @@ function collision(r1, r2){
 				//Check if player hp is 0 game over
 				if(player.currHP <= 0){
 					player.canMove = false;
-					var audio = document.getElementById("Thomas");
-			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = document.getElementById("myaudio");
-			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = document.getElementById("shop");
-			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = document.getElementById("menu");
-			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = document.getElementById("Mountain");
-		audio.volume = 0.0; audio.currentTime = 0;
+				
 					sfx.src = "Game Over (Legend of Zelda A Link Between Two Worlds).wav";
 					sfx.play();
 					var audio = new Audio('Owowowowowowow!.wav');

@@ -18,8 +18,9 @@ $(document).ready(function(){
 				//open and close menu on Q
 				if(state == stateMenu){
 		
-			var audio = document.getElementById("shop");
-			audio.volume = 0.0; audio.currentTime = 0;
+					
+				
+
 			var audio = document.getElementById("menu");
 			audio.volume = 0.0; audio.currentTime = 0;
 			var audio = new Audio('nsmbwiiMenuCancel.wav');
@@ -29,6 +30,7 @@ $(document).ready(function(){
 					var audio = new Audio('nsmbwiiMenuChoose.wav');
 					audio.play();
 					openMenu();
+		
 				}
 			}
 			
@@ -122,8 +124,7 @@ function startGame() {
 	audio.volume = 0.0; audio.currentTime = 0;
 	var audio = document.getElementById("Mountain");
 	audio.volume = 0.0; audio.currentTime = 0;
-	var audio = document.getElementById("shop");
-	audio.volume = 0.0; audio.currentTime = 0;
+
 	var audio = document.getElementById("menu");
 	audio.volume = 1.0; audio.currentTime = 0;
 	//Creates player character
