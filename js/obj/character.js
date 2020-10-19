@@ -22,7 +22,7 @@ function character(name, width, height, x, y, image){
 	this.frameX = this.w;
 	this.frameY = 0;
 	
-	//Dialogue Stuff from the Non Playable different colored Yoshis. These color-atered Yoshis  help the player on his quest.
+	//Dialogue Stuff from the Non Playable different colored Yoshis. These color-atered Yoshis help the player on his quest.
 	//Players just participate.
 	this.canMove = true;
 	this.inDialogue = false;

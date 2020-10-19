@@ -54,11 +54,10 @@ function fadeOut(tarScene, newX, newY){
 	$("#mainCanvas").fadeOut(fadeTime, function(){
 			state = tarScene;
 		
-			var audio = document.getElementById("shop");
-			audio.volume = 0.0; audio.currentTime = 0;
+
 			var audio = document.getElementById("menu");
 			audio.volume = 0.0; audio.currentTime = 0;
-			buildScenes(this.changeMusic);
+			buildScenes();
 			player.x = newX;
 			player.y = newY;
 			$("#mainCanvas").fadeIn(fadeTime);

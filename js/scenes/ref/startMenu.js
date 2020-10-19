@@ -18,16 +18,17 @@ function updateScene_startMenu(){
 //Formerly startGame1
 function newGame(){
 
+
 	var audio = document.getElementById("myaudio");
 	audio.volume = 1.0; audio.currentTime = 0;
-	var audio = document.getElementById("shop");
-	audio.volume = 0.0; audio.currentTime = 0;
-	var audio = document.getElementById("menu");
-	audio.volume = 0.0; audio.currentTime = 0;
 	var audio = document.getElementById("Thomas");
 	audio.volume = 0.0; audio.currentTime = 0;
 	var audio = document.getElementById("Mountain");
 	audio.volume = 0.0; audio.currentTime = 0;
+
+	var audio = document.getElementById("menu");
+	audio.volume = 0.0; audio.currentTime = 0;
+
 	var audio = new Audio('music/yoshi1.wav');
 	audio.play();
 	var audio = new Audio('nsmbwiiStartLevel.wav');
@@ -35,10 +36,11 @@ function newGame(){
 	player.currHP = player.maxHP
 	
 	$("#mainCanvas").fadeOut(fadeTime, function(){
-		state = stateTown;
-		
+		state = stateNecro1;
+	
 		buildScenes(true)
 		$("#mainCanvas").fadeIn(fadeTime);
 	});
 	
 }
+

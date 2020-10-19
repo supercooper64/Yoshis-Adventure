@@ -44,8 +44,7 @@ function attack(thisChar){
 			}else{
 				var audio = document.getElementById("myaudio");
 				audio.volume = 0.0; audio.currentTime = 0;
-				var audio = document.getElementById("shop");
-				audio.volume = 0.0; audio.currentTime = 0;
+	
 				var audio = document.getElementById("menu");
 				audio.volume = 0.0; audio.currentTime = 0;
 		

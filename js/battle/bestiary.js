@@ -5,7 +5,7 @@ var bestMaster = {
 	"Mountain": new monster(57, 48, 48, 2, 14, "img/mon2.png"),
 	"Ruins": new monster(82, 48, 48, 3, 60, "img/mon2.png"),
 	
-	"Queen": new monster(1, 96, 96, 1, 1000, "img/Queen.png")
+	"Queen": new monster(1, 96, 96, 1, 200, "img/Queen.png")
 };
 
 function assignMon(mon){

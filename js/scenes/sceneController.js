@@ -1,9 +1,7 @@
 var testWarp = 17;
 
-var bgm = document.createElement('audio');
-bgm.id = "bgm";
-bgm.src = "music/D";
-bgm.volume =0.4;	
+
+
 var npcs = [];
 var chests = [];
 var doors = [];
@@ -68,13 +66,13 @@ function startScenes(){
 	//npc(width, height, x, y, moveType, diaType, script, state, image)
 	npcs.push(new npc(33, 31, 200, 150, 0, 2, "towna", stateTown, "img/NPC Red Yoshi.png"));
 	npcs.push(new npc(33, 31, 242, 242, 0, 2, "townb", stateTown, "img/NPC Purple Yoshi.png", 2));
-	npcs.push(new npc(31, 31, 321, 242, 0, 0, "townc", stateTown, "img/NPC Blue Yoshi.png", 4));
+	npcs.push(new npc(34, 31, 321, 242, 0, 0, "townc", stateTown, "img/NPC Blue Yoshi.png", 4));
 
-	npcs.push(new npc(33, 31, 92, 156, 0, 0, "HelpWaste2", stateNecro3, "img/NPC Red Yoshi.png", 4));
+	npcs.push(new npc(33, 31, 92, 156, 0, 0, "HelpWaste2", stateNecro3, "img/NPC Red Yoshi.png", 0));
 	npcs.push(new npc(33, 31, 92, 156, 0, 0, "HelpWaste", stateWaste1, "img/NPC Red Yoshi.png", 2));
 	npcs.push(new npc(32, 31, 172, 156, 0, 0, "Help3", stateForest3, "img/NPC Red Yoshi.png", 4));
 	npcs.push(new npc(33, 31, 157, 156, 0, 0, "Help2", stateForest2, "img/NPC Red Yoshi.png", 2));
-	npcs.push(new npc(33, 31, 206, 91, 0, 2, "Help1", stateForest1, "img/NPC Red Yoshi.png", 2));
+	npcs.push(new npc(33, 31, 206, 91, 0, 0, "Help1", stateForest1, "img/NPC Red Yoshi.png", 4));
 	/*monsters.push(assignMon(bestMaster["Forest"]));
 	monsters[0].x = 250;
 	monsters[0].y = 150;	*/
@@ -119,14 +117,14 @@ function startScenes(){
 	warps.push(new warp(true, false, 4, stateNecro2, stateNecro3));
 	warps.push(new warp(true, true, 4, stateNecro3, stateNecro2));
 	warps.push(new warp(false, true, 6, stateNecro3, stateCastle,false,true));
-	warps.push(new warp(false, false, 6, stateCastle, stateNecro3));
+	warps.push(new warp(false, true, 7, stateCastle, stateNecro3));
 	
 	console.log("Scenes built");
 }
 
 function buildScenes(change) {
 	
-	bgm.pause();
+
 	
 	clearArrays();
 	
@@ -139,15 +137,6 @@ function buildScenes(change) {
 		}
 		
 	}
-	
-	//Loops
-	bgm.addEventListener('ended', function() {
-		this.currentTime = 0;
-		this.play();
-	}, false);
-	
-	bgm.volume = 0.5;
-	bgm.play();
 	
 	//This gives NPCs a value so they can be uniquely indentified later.
 	for(var i =0; i < npcs.length; i++){
@@ -371,52 +360,48 @@ function updateScenes(){
 	
 	
 }
+if(type = "Forest"){
+	var audio = document.getElementById("Boss");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("myaudio");
+	audio.volume = 1.0; audio.currentTime = 0;
+	var audio = document.getElementById("Thomas");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("Mountain");
+	audio.volume = 0.0; audio.currentTime = 0;
+}
+if(type = "Ruins"){
+	var audio = document.getElementById("Boss");
+	audio.volume = 0.0; audio.currentTime = 0;
 
+	var audio = document.getElementById("Thomas");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("Mountain");
+	audio.volume = 0.0; audio.currentTime = 0;
+}
+
+if(type = "Mountain"){
+	var audio = document.getElementById("Boss");
+	audio.volume = 0.0; audio.currentTime = 0;
+
+	var audio = document.getElementById("Thomas");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("Mountain");
+	audio.volume = 0.0; audio.currentTime = 0;
+}
 function spawnMonsters(){
 	if(state < 38){
- type = "Forest";
-		var audio = document.getElementById("myaudio");
-		audio.volume = 1.0; audio.currentTime = 0;
-		var audio = document.getElementById("shop");
-		audio.volume = 0.0; audio.currentTime = 0;
-		var audio = document.getElementById("menu");
-		audio.volume = 0.0; audio.currentTime = 0;
-		var audio = document.getElementById("Mountain");
-		audio.volume = 0.0; audio.currentTime = 0;
-		var audio = document.getElementById("Thomas");
-		audio.volume = 0.0; audio.currentTime = 0;
+		var type = "Forest";
 	
-		monsters.push(assignMon(bestMaster["Forest"]));
-		monsters.push(assignMon(bestMaster["Forest"]));
-
 		if(state > 30){
 			type = "Ruins";
-			var audio = document.getElementById("myaudio");
-			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = document.getElementById("shop");
-			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = document.getElementById("menu");
-			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = document.getElementById("Thomas");
-			audio.volume = 1.0; audio.currentTime = 0;
+		
 		}else if (state > 20){
 			type = "Mountain";
-			var audio = document.getElementById("Thomas");
-			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = document.getElementById("myaudio");
-			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = document.getElementById("shop");
-			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = document.getElementById("menu");
-			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = document.getElementById("Mountain");
-		audio.volume = 1.0; audio.currentTime = 0;
-		monsters.push(assignMon(bestMaster["Ruins"]));
-
-		}
-	
-		var rdm = Math.floor(Math.random() * 0) + 2;
 		
+		}
+		var rdm = Math.floor(Math.random() * 4) + 1;
+	
 		//Create Monsters
 		for(var i = 0; i < rdm; i++){
 			monsters.push(assignMon(bestMaster[type]));
@@ -432,8 +417,6 @@ function spawnMonsters(){
 					monPlaced = true;
 					monsters[m].x = (newx*40)+1;
 					monsters[m].y = (newy*40)+1;
-					var audio = document.getElementById("Boss");
-					audio.volume = 0.0; audio.currentTime = 0;
 				}
 			}
 		}
@@ -441,22 +424,18 @@ function spawnMonsters(){
 		monsters.push(assignMon(bestMaster["Queen"]));
 		monsters[0].x = 282;
 		monsters[0].y = 152;
-		monsters[0].type = "boss";
-		type = "Mountain";
-	
-		var audio = document.getElementById("Boss");
-		audio.volume = 1.0; audio.currentTime = 0;
-		var audio = document.getElementById("Thomas");
-		audio.volume = 0.0; audio.currentTime = 0;
+monsters[0].type = "boss";
+player.hit = true;
 		var audio = document.getElementById("myaudio");
 		audio.volume = 0.0; audio.currentTime = 0;
-		var audio = document.getElementById("shop");
+		var audio = document.getElementById("Thomas");
+		audio.volume = 1.0; audio.currentTime = 0;
+		var audio = document.getElementById("Mountain");
+		audio.volume = 0.0; audio.currentTime = 0;
+		var audio = document.getElementById("Boss");
 		audio.volume = 0.0; audio.currentTime = 0;
 		var audio = document.getElementById("menu");
 		audio.volume = 0.0; audio.currentTime = 0;
-		var audio = document.getElementById("Mountain");
-	audio.volume = 0.0; audio.currentTime = 0;
-		
 	}
-
 }
+
