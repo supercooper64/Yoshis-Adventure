@@ -23,11 +23,11 @@ $(document).ready(function(){
 
 			var audio = document.getElementById("menu");
 			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = new Audio('nsmbwiiMenuCancel.wav');
+			var audio = new Audio('SE_RC_PAUSE_OFF.wav');
 			audio.play();
 					closeMenu();
 				}else if(state > 9){
-					var audio = new Audio('nsmbwiiMenuChoose.wav');
+					var audio = new Audio('SE_RC_PAUSE_ON.wav');
 					audio.play();
 					openMenu();
 		
@@ -128,7 +128,7 @@ function startGame() {
 	var audio = document.getElementById("menu");
 	audio.volume = 1.0; audio.currentTime = 0;
 	//Creates player character
-	player = new character("PikaYoshi", 33,31, 280, 150, "img/hero Yoshi.png");
+	player = new character("PikaYoshi", 27,31, 270, 150, "img/Yoshi Repair.png");
 	cursor = new cursor(10,10);
 	
 	//Builds scene based on where you start		alert("Hello! I am an alert box!!");
