@@ -107,7 +107,7 @@ function advanceDia(thisChar){
 		}
 		
 		if(thisChar.type == "door"){
-		
+
 			thisChar.checkLock();
 		}
 		
@@ -257,7 +257,9 @@ function endDialogue(thisChar){
 	//If the dialogue is initiated by a chest, we add the prize and change
 	//Chest dialogue to tell the player it;s now empty.
 	if(thisChar.type == "chest"){
+
 		thisChar.changeDialogue();
+
 	}
 	if(thisChar.type == "door" && thisChar.opened){
 		doors.splice(doors.indexOf(thisChar), 1);
@@ -321,8 +323,7 @@ function changeLabel(newLabel, index){
 	//change label
 	//Advance Dialogue
 	npcs[index].label = newLabel;
-	var audio = new Audio('Owowowowowowow!.wav');
-	audio.play();
+
 	advanceDia(npcs[index]);
 }
 
