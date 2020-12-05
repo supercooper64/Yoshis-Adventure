@@ -1,15 +1,31 @@
-# Yoshi's Adventure Game (ROM HACK OF HTML5 Game)
+# Yoshi's Adventure (ROM HACK OF HTML5 Game)
+
 A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game, featuring music
-from Xuanyuan Jian Canwaizhuan:, Treasure Hunter G, Star Wars Episode VII: A New Hope, Romancing Saga 2 and Mamorukun Curse.
+from Xuanyuan Jian Canwaizhuan, Legend of Zelda: A Link Between Worlds, Treasure Hunter G, Star Wars Episode VII: A New Hope, Romancing Saga 2, The Beatles, and Mamorukun Curse.
+
+# What's new in Version 2.0.3?
+
+- Fixed a glitch where the player would not get hurt from the boss, Dratchy Downerhausen.
+
+- Some music in select pages of the game (excluding the main game) are replaced to make it more Zelda/RPG-like.
+
+- The non-playable Yoshis now have accurate dialogue, revealing the names of locations and other minor characters that were never revealed when the game first was launched, such as the boss now having a name, to be consistent.
+
+- The echoing/multiple play sound glitch that was present earlier when the player attacks or does certain things are fixed.
+
+- New sounds are added to the game, such as the ones from Baby Einstein's Baby Shakesphere when Yoshi receives items/keys, attacks enemies, or dies from losing too much HP.
 
 # Differences from HTML5 Game
+
 - The game's layout is changed and/or modified.
 
-- Unlike HTML5 Game, Yoshi does carry a sword when fighting. Instead, he has powerups, as Yoshis do not carry swords. The karate moves likely reference Alex Egelston.
+- Unlike HTML5 Game, Yoshi does carry a sword when fighting. Instead, he has powerups, as Yoshis do not carry swords in this game, as well as being less hostile.
 
 - Music is changed to ones of DJ Studio's liking.
 
 - When quitting the game, it functions like DJ STUDIO's other line of games, to be consistent.
+
+- Rooms and areas are redesigned.
 
 - There are Yoshi voice clips.
 
@@ -29,11 +45,13 @@ from Xuanyuan Jian Canwaizhuan:, Treasure Hunter G, Star Wars Episode VII: A New
 
 - Dialogue is changed or added, similar to The Wizarding World of Yoshis.
 
+- There is a seperate boss room that Zora is placed in. However, like some areas, it requires a key.
+
 # References to other media
 
 - Star Wars Episode VII: A New Hope: The Cantina theme is used in this game as the About theme.
 
-- The Egelston Family: Yoshi's "karate moves" are a reference to Alex Egelston. Also, the Egelston name is used as one of the powerups Yoshi can obtain.
+- Legend of Zelda: Four Swords: The different colored Yoshis color configuration are referencing the multiple Link clones from that game, albeit non playable.
 
 - HTML5 Game: This game runs on a modified engine of that game, with many changes, enhancements and additions.
 
@@ -41,41 +59,61 @@ from Xuanyuan Jian Canwaizhuan:, Treasure Hunter G, Star Wars Episode VII: A New
 
 - Treasure Hunter G: The Go Red Team, Go Blue Team theme is used in this game as the game menu theme.
 
-- Legend of Zelda: The Minish Cap: The Great Fairy theme is used as the Game Over theme.
+- Legend of Zelda: Phantom Hourglass: The You Miss theme is used as the Game Over theme.
 
 - Super Mario World and Yoshi's Island: Music in this game are soundfontted in these soundfonts to avoid copyright.
 
-- Legend of Zelda: A Link to the Past: The intro is based on this game, albeit with a green Triforce (to go with Yoshi's colors), and no music. Also, the Zelda theme is used as the ending theme in this game. Some sound effects are used.
+- Legend of Zelda: A Link to the Past: The intro is based on this game, albeit with a green Triforce (to go with Yoshi's colors), and no music. Some soundfonts from this game are used to avoid copyright.
+
+- Legend of Zelda: Majora's Mask: The Song of Healing theme is used when you finish the game.
 
 - Mario Kart 7: Sound effects are used in this game, mainly for the in-game menu.
+
+- The Beatles: The Eleanor Rigby song is used on the FAQ page.
+
+- Legend of Zelda: A Link Between Worlds: The Lorule Castle theme is used on the Contact Us page.
 
 - Mamorukun Curse!: The Karakuri Spirits theme is used in this game as the main theme.
 
 - Romancing Saga 2: The Last Battle theme is used in this game as the boss theme.
 
-- DJ STUDIO's site: Some of the mechanics of this game are reused from this site.
+- DJ STUDIO's site: Some of the mechanics of this game are reused from this site, such as quitting and the sound effect addition.
 
-- Mario and Luigi: Partners in Time: Yoshi's sprites are reused from this game, with the exception of Blue, Red and Purple Yoshi, which are repainted by DJ STUDIO due to the lack of frames for them.
+- The Walking Dead: Zombie Horses, as well as the Zombie Scourage, are references to this show.
 
-- Parks and Recreation (TV Show): Swanson Sewer Alley is a name reference to Ron Swanson himself. Leslie Knope is mentioned in this game by Blue Yoshi in the beginning of the game. Also, in the description for the powerup, Super Yoshi, Tom Haverford's "Treat Yo Self" catchphrase is said.
+- Star Wars franchise: The word, "May Yoshyrule Be With You!", is a reference to this franchises's "May the Force Be With You" phrase.
 
-- Dr Seuss franchise: Rhyming names that are said by the various Yoshis are a reference to this franchise's use of rhymes in sentences.
+- Mario and Luigi: Partners in Time: Yoshi's sprites are reused from this game, with the exception of Blue, Red and Purple Yoshi, which are completely repainted by DJ STUDIO due to the lack of frames for them in regards to turning their view when Yoshi "looks" at the NPC Yoshis, although Purple Yoshi was an original paint job after the game itself not containing that Yoshi.
+
+- Parks and Recreation (TV Show): The place, Swanson Sewers, is a name parodied reference to the character Ron Swanson. Leslie Knope is mentioned in this game by Blue Yoshi in the beginning of the game. Also, in the description for the powerup, Super Saiyan Yoshi, Tom Haverford's "Treat Yo Self" catchphrase is referenced.
+
+- Dragon Ball Z: The powerup name, Super Saiyan Yoshi, is a reference to the famous word, "Super Saiyan".
+
+- Dr Seuss franchise: Various rhyming-esque names and words that are said by the various Yoshis are a reference to this franchise's use of rhymes in sentences in their books.
 
 - Various Mario games: Sound effects and voice clips used in this game are taken from various media.
 
+- Baby Einstein: The camera click, "slap" (when Bard the Dragon is painting), and new word (heard when a new word is shown) sound effects from Baby Shakesphere/World of Words are reused in this game when Yoshi obtains Eggs and various items in the treasure boxes, as well as attacking enemies. When Yoshi dies in this game, the Butterfly Gone music (heard when a butterfly flies away from one of the puppets) plays.
+
 - Super Mario Maker: The applause, Scream and "OW" sound effects are used in this game.
 
-- Saturday Night Live: Gasteyer Garden, as well as Fey Forest, are rhyming name references to the actresses, Ana Gasteyer and Tina Fey.  Also, Debbie Downer is mentioned by Blue Yoshi during the beginning of the game and when he apologizes for "being one", during the middle of the game. Fey Forest is based on the forest setting of the recurring sketch, The Falconer, as well as Swanson Sewers.
+- Will and Grace: The boss who kidnaps Zora who has the last name Downerhausen is a parody of Anastasia Beaverhausen's (the alter ego of Karen Walker) last name.
+
+- Saturday Night Live: There are many references to this legendary NBC show. For example, Yoshi (as well as his buddies) visits places such as Fey Forest (where the game starts), Gasteyer Garden (Tutorial Yoshi's favorite area, according to him), and Mulaney Madlands (the castle area where Downerhausen and his many minions are found). Turns out, these places are name references to actresses, Ana Gasteyer, Tina Fey, and writer/actor John Mulaney. Also the antagonist's name, Dratchy Downerhausen, are references to the character, Debbie Downer, from a recurring SNL skit (the character is also mentioned by Blue Yoshi during the beginning of the game and when Purple Yoshi apologizes for "being one", during the middle of the game when he gets mad about the Zombie Scourage occuring), as well as the actress herself, Rachel Dratch. Fey Forest's setting, as well as the powerup name, "Furious Falconer", are partial references to the recurring Will Forte sketch, The Falconer. The "real names" for both Blue and Purple Yoshi, "Yoshneese" and "Yoehler Poehlerberg", are name parodies of Amy Poehler and Andy Samberg's last names, as well as Kristen Wiig's character, Dooneese, respectively.
 
 # Did You Know?:
 
-- This is the first game to star Yoshi as a protagonist, likely in tribute to Alex Egelston.
+- This is the first game to star Yoshi as a protagonist, likely in tribute to friend Alex Egelston.
 
 - Some of these mechanics, such as the addition of Tutorial Yoshi, were later reused or based on in The Wizarding World of Yoshis, the second DJ STUDIO-developed, non-Nintendo licensed game to star Yoshi.
 
 # Pre-release/Unused Content
 
-- Blue Yoshi was supposed to be Yellow Yoshi, but was not added due to the Photoshop paint editor rendering the color incorrect. 
+- Blue Yoshi was supposed to be Yellow Yoshi, but was not added due to the Photoshop paint editor rendering the color incorrect. This also was the case for Black and Pink Yoshi, who were replaced with Purple and Red Yoshi in the final.
 
 - The game had different sound effects.
+
+- Sarah was supposed to be the name for Zora. However, it was changed to avoid confusion with some people that are named that.
+
+- Prior to Version 2.0.3, the monster had no name. However, two names were planned: Poehlerberg (parody of Amy Poehler and Andy Samberg's last names) and Ghastly Gemini (name reference to Gemini's Twin), before being called Dratchy Downerhausen in the final, with the Poehler/Samberg name parody being merged as Purple Yoshi's name as well in the final.
 
