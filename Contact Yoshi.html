@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <style>
+                body{
+                    font-family: 'Toys R Us';     color:rgb(0, 0, 0);
+                    background-color:rgb(207, 192, 107);
+                }
+                .replay {
+                    padding: 5px;
+                }
+                @font-face { 
+
+font-family: 'Toys R Us'; 
+src: url("wayoshi.ttf");
+}
+                button {
+                    display: block;
+                    padding: 10px;
+                    min-width: 100px;
+                    font-size: 1.4em;
+                    font-family: sans-serif;
+                    border-radius: 15px;
+                    margin-top: 5px;
+                }
+                
+                input {
+                    font-size: 1.5em;
+                }
+                
+                .message {
+                    margin: 10px 0;
+                }
+                a{
+    color:transparent;
+    font-family: 'Toys R Us'; 
+}    h2{ 
+    color:rgb(0, 0, 0);
+                     font-size: 55px;
+                     font-weight: normal;
+                 }
+                 h1{  
+                    color:rgb(0, 0, 0);
+                     font-size: 48px;
+                     font-weight: normal;
+                     font-family: 'Toys R Us'; 
+                 }
+                 p{
+                    color:rgb(0, 0, 0);
+                     font-size: 28px;
+                     font-weight: normal;
+                     font-family: 'Toys R Us';  
+                 }
+            </style>
+              <body>
+<title>Contact Yoshi</title>
+                <div class="jumbotron">
+                    <div class="container">
+                     
+                     <div align= center>
+               
+            
+                                    <BR> 
+                                      
+                                      <div class="row">
+                                          <div class="col-lg-3"></div>
+                         
+                                     <div class="center">
+            
+                                          <h1 class="font-weight-normal">
+                                          
+                                    Something Interesting?<br>
+                                    Contact us and let us know <br> what's on your mind.
+                                            </h1>
+                             <img  src = "100px-G&WG3_Yoshi_and_Cookies.png" width = "200" height = "200">
+                             <br>      <br>
+                                    <form method="POST" action="https://formspree.io/danf6533@gmail.com">   
+                                      <input type="email" name="email" class = "container"  style = "  font-size: 30px;             font-family: 'Toys R Us'; " placeholder="Your email"> <br>
+                                      <textarea name="message" class = "container" style = "   font-size: 20px;              font-family: 'Toys R Us';  "placeholder= "Place friendly text here:"></textarea>   <div class="py-1">
+                                          <h3> <button type="submit" class = "container" style = " font-size:30px;            font-family: 'Toys R Us';   ">Submit</button> </h3>
+                                    </form>
+                                 
+             <a href="javascript:play_back_sound();" '><p style = "         color:rgb(0, 0, 0);  "> Back</p> </a>
+                                              </div>
+                                              <br>
+            
+                                              <audio id="audiotag2" src="nsmbwiiMenuCancel.wav" preload="auto"></audio>
+                                 
+                                                    </div>
+                                              
+                                                    <script type="text/javascript">
+                                                   
+                                                       function play_back_sound() {
+                                                           var audio = document.getElementById("myaudio");
+                                                     audio.volume = 0.0;
+                                                         document.getElementById('audiotag2').play();
+                                                         setTimeout(function(){ window.location.replace("Title Screen.html");}, 1000);
+                                                       }
+                                                    
+                                                       </script>
+            
+                   
+                <audio autoplay loop id="myaudio">
+                  <source src="Lorule Castle (Legend of Zelda A Link Between Worlds, Legend of Zelda Link of the Past and SMW Soundfonts).mp3" >
+                </audio>
+                       
+                    </body>
+                    </html>
+                </body>
+            </html>
+            

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <style>
+                body{
+                    font-family: 'Toys R Us';     color:rgb(0, 0, 0);
+                    background-color:rgb(207, 192, 107);
+                }
+                .replay {
+                    padding: 5px;
+                }
+                @font-face { 
+
+font-family: 'Toys R Us'; 
+src: url("wayoshi.ttf");
+}
+                button {
+                    display: block;
+                    padding: 10px;
+                    min-width: 100px;
+                    font-size: 1.4em;
+                    font-family: sans-serif;
+                    border-radius: 15px;
+                    margin-top: 5px;
+                }
+                
+                input {
+                    font-size: 1.5em;
+                }
+                
+                .message {
+                    margin: 10px 0;
+                }
+                a{
+  color:rgb(0, 0, 0);
+    font-family: 'Toys R Us'; 
+}    h2{ 
+    color:rgb(0, 0, 0);
+                     font-size: 45px;
+                     font-weight: normal;
+                     font-family: 'Toys R Us'; 
+                 }
+                 h1{  
+                    color:rgb(0, 0, 0);
+                     font-size: 48px;
+                     font-weight: normal;
+                     font-family: 'Toys R Us'; 
+                 }
+                 p{
+                    color:rgb(0, 0, 0);
+                     font-size: 28px;
+                     font-weight: normal;
+                     font-family: 'Toys R Us';  
+                 }
+                 p4{
+                    color:rgb(0, 0, 0);
+                     font-size: 20px;
+                     font-weight: normal;
+                     font-family: 'Toys R Us';  
+                 }
+            </style>
+        <title>FAQ</title>
+    </head>
+    <link rel="icon" href="img/food.png">
+    <body>
+        
+    <div class="jumbotron">
+        <div class="container">
+         
+         <div align= center>
+   
+      <div class="jumbotron">
+        <div class="container">
+            <h1> Yoshi's Frequently Asked Questions <br> </h1></a>
+<BR> 
+</div></div>
+<a href="javascript:play_back_sound();"><img  src = "SMA-GreenYoshi.png" width = "100" height = "150"></a>
+<br><br>
+<h1> Who is Tutorial Yoshi? <br> </h1>
+<div class="center"></div>
+    <p> Tutorial Yoshi: A friendly red Yoshi who helps young Yoshi on <br>his quest to save Princess Zora.<br><br>
+<p4>NOTE TO READER: He does not appear in some areas. The player must go to those on their own.</p4> 
+<br><br>
+
+      <h1> What are Fey Forest, Swanson Sewers, Mulaney Madlands and Gasteyer Garden?</h1>
+      <div class="center"></div>
+          <p> Fey Forest: A forest that is the main home of the Yoshis in Yoshyrule. <br>
+              <br>Swanson Sewers: A sewer filled area where snakes are home to.    <br>
+              <br>Gasteyer Garden: A garden area located in Fey Forest that is the Yoshis' happy place. <br> It is the only place where the Zombie scourage does 
+              not take place.
+              <br> <br>Mulaney Madlands: A hostile environment ruled by Dratchy Downerhausen.  <br>This is where Princess Zora is locked up.</p>
+
+          <p4>NOTE TO READER: Some items and Tutorial Yoshi are absent in different areas.</p><br>
+                <br>
+
+                <h1> Who is Dratchy Downerhausen?</h1>
+                <div class="center"></div>
+                    <p>Dratchy Downerhausen is the antagonist of Yoshyrule. He kidnaps  
+                        <br>Princess Zora, as well as being the one who caused a Zombie scourage to occur. <br> <br>
+Downerhausen can only be found in the castle area of <br> Mulaney Madlands, where Zora is locked up.<br>
+<br>
+          
+                    <p4>NOTE TO READER: Unlike the snakes or horses, he has 800 HP.</p><br>
+                          <br>
+<h1> How many songs are in this game? <br> </h1>
+<div class="center"></div>
+    <p>There are 8 songs overall, most from various media and games. <br><br>
+<p4>NOTE TO READER: ALL music used in this entire game are not owned by DJ STUDIO & are used strictly for entertainment/meme purposes only.</p4><br>
+<br>
+
+<a href="javascript:play_back_sound();" '><p style = "         color:rgb(0, 0, 0);  "> Back</p> </a>
+</div>
+<br>
+
+<audio id="audiotag2" src="nsmbwiiMenuCancel.wav" preload="auto"></audio>
+
+
+
+      <script type="text/javascript">
+     
+         function play_back_sound() {
+             var audio = document.getElementById("myaudio");
+       audio.volume = 0.0;
+           document.getElementById('audiotag2').play();
+           setTimeout(function(){ window.location.replace("Title Screen.html");}, 1000);
+         }
+      
+         </script>
+ <audio id="myaudio" src="Eleanor Rigby (The Beatles, SMW, Yoshis Island and Legend of Zelda Link of the Past Soundfont).mp3" autoplay loop></audio>
+
+<script type="text/javascript">
+                 var audio = document.getElementById("myaudio");
+                    audio.volume = 1.0;
+    function play_single_sound() {
+        var audio = document.getElementById("myaudio");
+                    audio.volume = 0.0;
+       document.getElementById('audiotag2').play();
+       setTimeout(function(){ window.location.replace("index.html");}, 2000);
+     }    
+        
+    function play_dat_sound() {
+        var audio = document.getElementById("myaudio");
+                    audio.volume = 0.0;
+      document.getElementById('audiotag1').play();
+      setTimeout(function(){ window.location.replace("Title Screen.html");}, 1000);
+    }
+  </script>
+</body>
+</html>

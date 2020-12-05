@@ -39,7 +39,7 @@ src: url("wayoshi.ttf");
     font-family: 'Toys R Us'; 
 }    h2{ 
     color:rgb(0, 0, 0);
-                     font-size: 46px;
+                     font-size: 76px;
                      font-weight: normal;
                  }
                  h1{  
@@ -50,7 +50,7 @@ src: url("wayoshi.ttf");
                  }
                  p{
                     color:rgb(0, 0, 0);
-                     font-size: 28px;
+                     font-size: 38px;
                      font-weight: normal;
                      font-family: 'Toys R Us'; 
                  }
@@ -67,24 +67,23 @@ src: url("wayoshi.ttf");
                     <div class="container">
                      
                      <div align= center>
-               
-                  <div class="jumbotron">
-                    <div class="container">
-                        <BR> 
+      
+      
         
                            <h2>Game Over!</h2>
 
 
-             <embed src = "Dead Yoshi.jpg" width = "200" height = "100">
+             <embed src = "Dead Yoshi.png" width = "250" height = "100">
   <p> What a bummer... :( <br> <br> Try again?</p>
+  -----------------------------------------------------------------------------------------
   <audio id="audiotag1" src="nsmbwiiMenuChoose.wav" preload="auto"></audio>
   <audio id="audiotag2" src="nsmbwiiMenuCancel.wav" preload="auto"></audio>
   <a href="javascript:play_again_sound();"><h1> yes</h1></a>
   <a href="javascript:play_dat_sound();"><h1> Go to Menu</h1></a>
 
 
-<audio autoplay loop id = "myaudio">
-<source src = "Game Over (Legend of Zelda Minish Cap).mp3">
+<audio autoplay  id = "myaudio">
+<source src = "Game Over (Legend of Zelda Phantom Hourglass).mp3">
 </audio>
 
                   <!--<audio controls="controls" hidden onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 4000)">
@@ -106,7 +105,7 @@ src: url("wayoshi.ttf");
                            document.getElementById('audiotag2').play();
                            var audio = document.getElementById("myaudio");
   audio.volume = 0.0;
-                           setTimeout(function(){ window.location.replace("Title.html");}, 1000);
+                           setTimeout(function(){ window.location.replace("Title Screen.html");}, 1000);
                          }
       
                        </script>

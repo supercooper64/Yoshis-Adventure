@@ -3,7 +3,7 @@
 	<title>Yoshi's Adventure  (AKA Legend of Zora) (Bootleg/Knockoff/ROM Hack of HTML5 Game)</title>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
 <style>
    @font-face { 
 	font-weight: normal;
@@ -75,15 +75,31 @@ body{
 <audio src = "Last Battle (Romancing SaGa 2, SMW Soundfont).wav" loop id = "Thomas" autoplay></audio>
 <audio src = "" loop id = "Mountain" autoplay></audio>
 <audio src = "Go Red Team, Go White Team (Treasure Hunter G, SMW Soundfont).mp3" loop id = "menu" autoplay></audio>
-<audio src = "" loop id = "Boss" autoplay></audio>
+<audio id = "found item" src = "Baby Einstein Found It Alt SFX.mp3"   preload="auto"></audio>
+<audio id = "found item 2" src = "Baby Einstein Found It SFX.mp3"   preload="auto"></audio>
+<audio id = "ow" src = "OW!.wav"   preload="auto"></audio>
+<audio id = "pause" src = "SE_RC_PAUSE_ON.wav"   preload="auto"></audio>
+<audio id = "throw" src = "music/throw.wav"   preload="auto"></audio>
+<audio id = "scream" src = "music/SE_OssanHimei4.wav"   preload="auto"></audio>
+<audio id = "shell" src = "SE_BOSS_CMN_SMART_SHELL_ROLL.wav"   preload="auto"></audio>
+<audio id = "monster" src = "monDie.wav"   preload="auto"></audio>
+<audio id = "pause end" src = "SE_RC_PAUSE_OFF.wav"   preload="auto"></audio>
+<audio id="audiotag1" src="nsmbwiiMenuCancel.wav" preload="auto"></audio>
+<audio id="audiotag2" src="nsmbwiiMenuChoose.wav" preload="auto"></audio>
+<audio id="byebye" src="Baby Einstein SFX.mp3" preload="auto"></audio>
+<audio id="key" src="New Stage (NSMBDS).mp3" preload="auto"></audio>
+<audio id="note" src="nsmbwiiToadMessage.wav" preload="auto"></audio>
+<audio id="slap" src="Baby Einstein Swipe SFX.mp3" preload="auto"></audio>
+<audio id="attack" src="music/pick_up.wav" preload="auto"></audio>
+<audio id="coin" src="nsmb_smw2_redcoin.wav" preload="auto"></audio>
+<audio id="allcoin" src="nsmbwiiRedCoinAll.wav" preload="auto"></audio>
 <script>
         var audio = document.getElementById("myaudio");
 		audio.volume = 0.0; audio.currentTime = 0;
 
 		var audio = document.getElementById("menu");
 		audio.volume = 0.0; audio.currentTime = 0;
-		var audio = document.getElementById("Boss");
-		audio.volume = 0.0; audio.currentTime = 0;
+
 		var audio = document.getElementById("Thomas");
 		audio.volume = 0.0; audio.currentTime = 0;
 
