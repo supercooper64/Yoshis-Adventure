@@ -1,7 +1,6 @@
 # Yoshi's Adventure (ROM HACK OF HTML5 Game)
 
-A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game, featuring music
-from Xuanyuan Jian Canwaizhuan, Legend of Zelda: A Link Between Worlds, Treasure Hunter G, Star Wars Episode VII: A New Hope, Romancing Saga 2, The Beatles, and Mamorukun Curse.
+A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game, featuring music from Xuanyuan Jian Canwaizhuan, Legend of Zelda: A Link Between Worlds, Treasure Hunter G, Star Wars Episode VII: A New Hope, Romancing Saga 2, The Beatles, and Mamorukun Curse.
 
 # What's new in Version 2.0.3?
 
@@ -25,7 +24,7 @@ from Xuanyuan Jian Canwaizhuan, Legend of Zelda: A Link Between Worlds, Treasure
 
 - When quitting the game, it functions like DJ STUDIO's other line of games, to be consistent.
 
-- Rooms and areas are redesigned.
+- Rooms and areas are redesigned, especially the beginning of Fey Forest.
 
 - There are Yoshi voice clips.
 
@@ -33,7 +32,7 @@ from Xuanyuan Jian Canwaizhuan, Legend of Zelda: A Link Between Worlds, Treasure
 
 - The original game's NPCs are replaced with blue, red and purple Yoshis, referencing the different colored Links in the Zelda line of games (the enemies are not changed).
 
-- Music now changes when going to the boss, rather than being the same Forest theme for that level.
+- Music now changes when going to the boss, rather than being the same Forest theme for that area.
 
 - The boss door is locked, not allowing Yoshi to go outside of the room.
 
@@ -45,7 +44,7 @@ from Xuanyuan Jian Canwaizhuan, Legend of Zelda: A Link Between Worlds, Treasure
 
 - Dialogue is changed or added, similar to The Wizarding World of Yoshis.
 
-- There is a seperate boss room that Zora is placed in. However, like some areas, it requires a key.
+- There is a seperate boss room that Zora is placed in. However, like some areas, it requires a key to get in.
 
 # References to other media
 
@@ -83,7 +82,7 @@ from Xuanyuan Jian Canwaizhuan, Legend of Zelda: A Link Between Worlds, Treasure
 
 - Star Wars franchise: The word, "May Yoshyrule Be With You!", is a reference to this franchises's "May the Force Be With You" phrase.
 
-- Mario and Luigi: Partners in Time: Yoshi's sprites are reused from this game, with the exception of Blue, Red and Purple Yoshi, which are completely repainted by DJ STUDIO due to the lack of frames for them in regards to turning their view when Yoshi "looks" at the NPC Yoshis, although Purple Yoshi was an original paint job after the game itself not containing that Yoshi.
+- Mario and Luigi: Partners in Time: Yoshi's sprites are reused from this game, with the exception of Blue, Red and Purple Yoshi, which are completely repainted by DJ STUDIO due to the lack of frames for them in regards to turning their view when Yoshi "looks" at the NPC Yoshis, although Purple Yoshi was an original paint job after the game did not have that colored Yoshi.
 
 - Parks and Recreation (TV Show): The place, Swanson Sewers, is a name parodied reference to the character Ron Swanson. Leslie Knope is mentioned in this game by Blue Yoshi in the beginning of the game. Also, in the description for the powerup, Super Saiyan Yoshi, Tom Haverford's "Treat Yo Self" catchphrase is referenced.
 
@@ -116,4 +115,3 @@ from Xuanyuan Jian Canwaizhuan, Legend of Zelda: A Link Between Worlds, Treasure
 - Sarah was supposed to be the name for Zora. However, it was changed to avoid confusion with some people that are named that.
 
 - Prior to Version 2.0.3, the monster had no name. However, two names were planned: Poehlerberg (parody of Amy Poehler and Andy Samberg's last names) and Ghastly Gemini (name reference to Gemini's Twin), before being called Dratchy Downerhausen in the final, with the Poehler/Samberg name parody being merged as Purple Yoshi's name as well in the final.
-
