@@ -5,7 +5,7 @@ function door(x, y, w, h, scene){
 	this.x = x;
 	this.y = y;
 	this.type = "door";
-	this.color = "brown";
+	this.color = "red";
 	this.index = 0;
 	//this.newImg = document.createElement("IMG");
 	//this.newImg.setAttribute("src", "img/door.png");
@@ -16,9 +16,11 @@ function door(x, y, w, h, scene){
 	this.label = "";
 	this.opened = false;
 	this.diaCounter = 0;
-	this.dialogue = ["It's locked."];
+
+	this.dialogue = ["It's locked. In some places, talk to Tutorial Yoshi about opening this door."];
 	//this.script = script;
 	this.update = function() {
+	
 		var destframe = 0;
 		if(this.opened){
 			var destframe = 30;
@@ -30,13 +32,15 @@ function door(x, y, w, h, scene){
 		//ctx.drawImage(this.newImg, destframe, 0, 15, 15, this.x, this.y, this.w, this.h);
     }
 	this.checkLock = function(){
+
 		if(!this.opened){
 			for(var i = 0; i < inventory.length; i++){
 				if(inventory[i].name == "Key"){
 					this.dialogue[0] = "Key activated!";
 					this.opened = true;
-					var audio = new Audio('New Stage (NSMBDS).mp3');
-					audio.play();
+					document.getElementById('key').play();
+					var audio = document.getElementById("key");
+				audio.volume = 1.0; audio.currentTime = 0;
 					inventory[i].useCureItem();
 				}
 			}

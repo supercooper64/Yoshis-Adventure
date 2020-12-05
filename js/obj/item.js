@@ -11,7 +11,7 @@ function item(name, value, buy, sell, type, qty, description){
 	//This is poor design. Some item functions are here and others are on the 
 	//Item controller. Remind me to fix that.
 	this.useCureItem = function() {
-		player.currHP = player.maxHP;
+		player.currHP +=22;
 		if(player.currHP > player.maxHP){
 			player.currHP = player.maxHP;
 		}

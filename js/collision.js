@@ -43,7 +43,7 @@ function collision(r1, r2){
 				}else{
 					hitValue = r2.value;
 				}
-		
+	
 				sfx.src = "vc_yoshi_missfoot02.wav";
 				sfx.play();
 				if(player.equippedArmor.value >= hitValue){
@@ -63,11 +63,14 @@ function collision(r1, r2){
 				//Check if player hp is 0 game over
 				if(player.currHP <= 0){
 					player.canMove = false;
-				
-					sfx.src = "Game Over (Legend of Zelda A Link Between Two Worlds).wav";
+					var audio = document.getElementById("myaudio");
+					audio.volume = 0.0; audio.currentTime = 0;
+					sfx.src = "Baby Einstein Butterfly Gone SFX.mp3";
 					sfx.play();
-					var audio = new Audio('Owowowowowowow!.wav');
+					var audio = new Audio('Yoshi Death.wav');
 					audio.play();
+					var audio = document.getElementById("Thomas");
+					audio.volume = 0.0; audio.currentTime = 0;
 					//GO Sequence
 					gameOver();
 					setTimeout(function(){ window.location.replace("Game Over.html");}, 5000);

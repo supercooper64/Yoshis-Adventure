@@ -16,7 +16,7 @@ function chest(x, y, prizeType, prizeValue, scene){
 	this.label = "";
 	this.opened = false;
 	this.diaCounter = 0;
-	this.dialogue = ["You found: "];
+	this.dialogue = ["Item(s) found: "];
 	//this.script = script;
 	this.update = function() {
 		var destframe = 0;
@@ -30,7 +30,10 @@ function chest(x, y, prizeType, prizeValue, scene){
 		ctx.drawImage(this.newImg, destframe, 0, 15, 15, this.x, this.y, this.w, this.h);
     }
 	this.changeDialogue = function() {
+	
+	
 		this.dialogue = ["This is empty."];
+		
 	}
 	
 	

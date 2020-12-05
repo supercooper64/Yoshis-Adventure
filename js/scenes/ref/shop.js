@@ -81,10 +81,14 @@ function openShop(index){
 			checkItem(currShop[shopIndex].value, currShop[shopIndex].type);
 		}
 }
+function openEnd(index){
+window.location.replace("Saved.html");
 
+}
 function closeShop(){
-	var audio = new Audio('sigh.wav');
-	audio.play();
+	var audio = document.getElementById("menu");
+	audio.volume = 0.0; audio.currentTime = 0;
+	document.getElementById('audiotag1').play();
 	state = prevState;
 	scrollOffset = 0;
 	cursor.visible = false;
@@ -174,18 +178,21 @@ function checkShop(){
 
 		var audio = document.getElementById("menu");
         audio.volume = 0.0; audio.currentTime = 0;
-		var audio = new Audio('nsmbwiiMenuCancel.wav');
-		audio.play();
+		document.getElementById('audiotag1').play();
+		var audio = document.getElementById("audiotag1");
+	audio.volume = 1.0;
 		closeShop();
 	}else if(buyMode){
 
 		//Buy Item
-		var audio = new Audio('nsmbwiiMenuChoose.wav');
-		audio.play();
+		document.getElementById('note').play();
+		var audio = document.getElementById("note");
+	audio.volume = 1.0; audio.currentTime = 0;
 		buyItem(currShop[shopIndex]);
 	}else{
-		var audio = new Audio('nsmbwiiMenuChoose.wav');
-		audio.play();
+		document.getElementById('audiotag2').play();
+				var audio = document.getElementById("audiotag2");
+			audio.volume = 1.0; audio.currentTime = 0;
 		//Sell Item
 		sellItem(inventory[shopIndex]);
 	}

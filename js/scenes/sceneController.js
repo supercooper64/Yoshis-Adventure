@@ -38,19 +38,21 @@ function clearArrays(){
 function startScenes(){
 	
 	//TEST Scene items that are declared once and never deleted
-
+	chests.push(new chest(42,152, 1, assignItem(invMaster["Potion"]), stateTown));
 	chests.push(new chest(446,126, 0, 100, stateForest2));
-	chests.push(new chest(42,82, 1, assignItem(invMaster["Potion"]), stateForest2));
+
+	chests.push(new chest(446,126, 0, 123, stateForest1));
+	chests.push(new chest(42,82, 1, assignItem(invMaster["SUPER SAIYAN YOSHI"]), stateForest2));
 	chests.push(new chest(272,247, 0, 100, stateForestOut));
-	chests.push(new chest(530,38, 1, assignItem(invMaster["Key"]), stateForest3));
-	chests.push(new chest(122,282, 1, assignItem(invMaster["Zora's Potion"]), stateWaste1));
+	chests.push(new chest(360, 85, 1, assignItem(invMaster["Key"]), stateForest3));
+	chests.push(new chest(122,282, 123, assignItem(invMaster["FURIOUS FALCONER"]), stateWaste1));
 	chests.push(new chest(42,122, 1, assignItem(invMaster["Key"]), stateWaste2));
 
 	chests.push(new chest(442,42, 1, assignItem(invMaster["Key"]), stateNecro2));
 
-	chests.push(new chest(526,42, 1, assignItem(invMaster["MaxPotion"]), stateNecro3));
-	
-	
+	chests.push(new chest(52,42, 1, assignItem(invMaster["Key"]), stateCastle));
+	chests.push(new chest(452,57, 1, assignItem(invMaster["Key"]), stateNecro3));
+
 	//door(x, y, w, h, scene){
 	//doors.push(new door(250, 200, 80, 10, stateTown));
 
@@ -64,28 +66,28 @@ function startScenes(){
 	chests.push(new chest(200,200, 1, assignItem(invMaster["McGuffin"]), stateForest));
 	*/
 	//npc(width, height, x, y, moveType, diaType, script, state, image)
-	npcs.push(new npc(33, 31, 200, 150, 0, 2, "towna", stateTown, "img/NPC Red Yoshi.png"));
-	npcs.push(new npc(33, 31, 242, 242, 0, 2, "townb", stateTown, "img/NPC Purple Yoshi.png", 2));
-	npcs.push(new npc(34, 31, 321, 242, 0, 0, "townc", stateTown, "img/NPC Blue Yoshi.png", 4));
+	npcs.push(new npc(33, 31, 120, 120, 0, 0, "towna", stateTown, "img/NPC Red Yoshi.png", 2));
+	npcs.push(new npc(33, 31, 202, 242, 0, 0, "townb", stateTown, "img/NPC Purple Yoshi.png", 2));
+	npcs.push(new npc(33, 31, 371, 242, 0, 0, "townc", stateTown, "img/NPC Blue Yoshi.png", 4));
 
-	npcs.push(new npc(33, 31, 92, 156, 0, 0, "HelpWaste2", stateNecro3, "img/NPC Red Yoshi.png", 0));
-	npcs.push(new npc(33, 31, 92, 156, 0, 0, "HelpWaste", stateWaste1, "img/NPC Red Yoshi.png", 2));
-	npcs.push(new npc(32, 31, 172, 156, 0, 0, "Help3", stateForest3, "img/NPC Red Yoshi.png", 4));
+	npcs.push(new npc(33, 31, 42, 47, 0, 0, "HelpWaste2", stateNecro3, "img/NPC Red Yoshi.png", 0));
+	npcs.push(new npc(31, 31, 482, 286, 0, 0, "HelpWaste", stateWaste1, "img/NPC Red Yoshi.png", 4));
+	npcs.push(new npc(31, 31, 210, 85, 0, 0, "Help3", stateForest3, "img/NPC Red Yoshi.png", 4));
 	npcs.push(new npc(33, 31, 157, 156, 0, 0, "Help2", stateForest2, "img/NPC Red Yoshi.png", 2));
-	npcs.push(new npc(33, 31, 206, 91, 0, 0, "Help1", stateForest1, "img/NPC Red Yoshi.png", 4));
+	npcs.push(new npc(33, 31, 200, 91, 0, 0, "Help1", stateForest1, "img/NPC Red Yoshi.png", 2));
+	npcs.push(new npc(33, 31, 90, 41, 0, 0, "HelpNecro", stateNecro1, "img/NPC Red Yoshi.png", 2));
 	/*monsters.push(assignMon(bestMaster["Forest"]));
 	monsters[0].x = 250;
 	monsters[0].y = 150;	*/
 	
-	npcs.push(new npc(33, 31, 84, 204, 0, 2, "foresta", stateForestOut, "img/NPC Red Yoshi.png",1));
-	npcs.push(new npc(33, 31, 164, 124, 0, 2, "forestb", stateForestOut, "img/NPC Purple Yoshi.png"));
-	npcs.push(new npc(31, 31, 384, 284, 0, 0, "forestc", stateForestOut, "img/NPC Blue Yoshi.png",1));
+	npcs.push(new npc(33, 31, 84, 204, 0, 0, "foresta", stateForestOut, "img/NPC Red Yoshi.png",1));
+	npcs.push(new npc(33, 31, 164, 124, 0, 0, "forestb", stateForestOut, "img/NPC Purple Yoshi.png"));
+	npcs.push(new npc(33, 31, 398, 284, 0, 0, "forestc", stateForestOut, "img/NPC Blue Yoshi.png",1));
 
-	npcs.push(new npc(32, 31, 324, 202, 0, 2, "wastea", stateWasteOut, "img/NPC Red Yoshi.png"));
-	npcs.push(new npc(33, 31, 162, 202, 0, 2, "wasteb", stateWasteOut, "img/NPC Purple Yoshi.png"));
-	npcs.push(new npc(31, 31, 200, 60, 0, 0, "wastec", stateWasteOut, "img/NPC Blue Yoshi.png"));
-	
-	npcs.push(new npc(32, 32, 61, 102, 0, 0, "Alex's BFF", stateCastle, "img/hero.png"));
+	npcs.push(new npc(33, 31, 324, 204, 0, 0, "wastea", stateWasteOut, "img/NPC Red Yoshi.png",2));
+	npcs.push(new npc(33, 31, 42, 290, 0, 0, "wasteb", stateWasteOut, "img/NPC Purple Yoshi.png",1));
+	npcs.push(new npc(33, 31, 200, 40, 0, 0, "wastec", stateWasteOut, "img/NPC Blue Yoshi.png", 4));
+	npcs.push(new npc(32, 32, 42, 52, 0, 0, "Alex's BFF", stateFinish, "img/hero.png"));
 	//npcs.push(new npc(32, 32, 324, 202, 0, 0, "butcher", stateNcero3, "img/butcher.png"));
 	//npcs.push(new npc(32, 32, 282, 150, 0, 0, "queen", stateCastle, "img/Queen.png"));
 	
@@ -116,8 +118,8 @@ function startScenes(){
 	warps.push(new warp(true, true, 4, stateNecro2, stateNecro1));
 	warps.push(new warp(true, false, 4, stateNecro2, stateNecro3));
 	warps.push(new warp(true, true, 4, stateNecro3, stateNecro2));
-	warps.push(new warp(false, true, 6, stateNecro3, stateCastle,false,true));
-	warps.push(new warp(false, true, 7, stateCastle, stateNecro3));
+	warps.push(new warp(false, true, 6, stateNecro3, stateCastle, true,true));
+	warps.push(new warp(false, true, 5, stateCastle, stateFinish, true,true));
 	
 	console.log("Scenes built");
 }
@@ -361,8 +363,7 @@ function updateScenes(){
 	
 }
 if(type = "Forest"){
-	var audio = document.getElementById("Boss");
-	audio.volume = 0.0; audio.currentTime = 0;
+
 	var audio = document.getElementById("myaudio");
 	audio.volume = 1.0; audio.currentTime = 0;
 	var audio = document.getElementById("Thomas");
@@ -371,8 +372,7 @@ if(type = "Forest"){
 	audio.volume = 0.0; audio.currentTime = 0;
 }
 if(type = "Ruins"){
-	var audio = document.getElementById("Boss");
-	audio.volume = 0.0; audio.currentTime = 0;
+
 
 	var audio = document.getElementById("Thomas");
 	audio.volume = 0.0; audio.currentTime = 0;
@@ -381,26 +381,26 @@ if(type = "Ruins"){
 }
 
 if(type = "Mountain"){
-	var audio = document.getElementById("Boss");
-	audio.volume = 0.0; audio.currentTime = 0;
+
 
 	var audio = document.getElementById("Thomas");
 	audio.volume = 0.0; audio.currentTime = 0;
 	var audio = document.getElementById("Mountain");
 	audio.volume = 0.0; audio.currentTime = 0;
 }
+
 function spawnMonsters(){
 	if(state < 38){
 		var type = "Forest";
-	
+		var rdm = 4;
 		if(state > 30){
-			type = "Ruins";
-		
+			type = "Mountain";
+			var rdm = 6;
 		}else if (state > 20){
 			type = "Mountain";
-		
+			var rdm = 10;
 		}
-		var rdm = Math.floor(Math.random() * 4) + 1;
+
 	
 		//Create Monsters
 		for(var i = 0; i < rdm; i++){
@@ -422,18 +422,35 @@ function spawnMonsters(){
 		}
 	}else{
 		monsters.push(assignMon(bestMaster["Queen"]));
-		monsters[0].x = 282;
-		monsters[0].y = 152;
-monsters[0].type = "boss";
-player.hit = true;
+		monsters[0].x = 200;
+		monsters[0].y = 42;
+		monsters[0].type="monster";
+
+		monsters.push(assignMon(bestMaster["Ruins"]));
+		monsters[1].x = 50;
+		monsters[1].y = 42;
+		monsters[1].type="monster";
+		monsters.push(assignMon(bestMaster["Ruins"]));
+		monsters[2].x = 200;
+		monsters[2].y = 182;
+		monsters[2].type="monster";
+
+		monsters.push(assignMon(bestMaster["Ruins"]));
+		monsters[3].x = 280;
+		monsters[3].y = 182;
+		monsters[3].type="monster";
+
+		monsters.push(assignMon(bestMaster["Ruins"]));
+		monsters[4].x = 240;
+		monsters[4].y = -2;
+		monsters[4].type="monster";
 		var audio = document.getElementById("myaudio");
 		audio.volume = 0.0; audio.currentTime = 0;
 		var audio = document.getElementById("Thomas");
 		audio.volume = 1.0; audio.currentTime = 0;
 		var audio = document.getElementById("Mountain");
 		audio.volume = 0.0; audio.currentTime = 0;
-		var audio = document.getElementById("Boss");
-		audio.volume = 0.0; audio.currentTime = 0;
+
 		var audio = document.getElementById("menu");
 		audio.volume = 0.0; audio.currentTime = 0;
 	}

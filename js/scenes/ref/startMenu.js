@@ -10,8 +10,6 @@ function updateScene_startMenu(){
 	ctx.fillText("(C) 2019 by DJ STUDIO.",242,186);
 	ctx.font = "13px Egelston";
 	ctx.fillStyle = "black";
-	ctx.fillText("Game Images, Music (C) Nintendo, Square Enix, Lucasfilm.",163,216);
-
 
 }
 
@@ -33,10 +31,10 @@ function newGame(){
 	audio.play();
 	var audio = new Audio('nsmbwiiStartLevel.wav');
 	audio.play();
-	player.currHP = player.maxHP
+	player.currHP = 999;
 	
 	$("#mainCanvas").fadeOut(fadeTime, function(){
-		state = stateNecro1;
+		state = stateTown;
 	
 		buildScenes(true)
 		$("#mainCanvas").fadeIn(fadeTime);

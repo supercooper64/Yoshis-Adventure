@@ -21,18 +21,30 @@ function attack(thisChar){
 		thisChar.currHP -= player.equippedWeapon.value;
 		textParts.push(new textParticle(thisChar.x,thisChar.y,player.equippedWeapon.value,"green",thisChar.w));
 		//Other stuff goes here. Graphics/ sound effects
-		var audio = new Audio('music/throw.wav');
-		audio.play();
-		sfx.src = "OW!.wav";
-		sfx.play();
-		var audio = new Audio('SE_BOSS_CMN_STOMPED.wav');
-		audio.play();
-	
-		if(thisChar.currHP <= 0){
-			sfx.src = "music/SE_OssanHimei4.wav";
-			sfx.volume = 1;
-			sfx.play();
+		var audio = document.getElementById("throw");
+		audio.volume = 1.0; audio.currentTime = 0;
+			document.getElementById('throw').play();
 
+		var audio = document.getElementById("ow");
+		audio.volume = 1.0; audio.currentTime = 0;
+			document.getElementById('ow').play();
+		sfx.src = "SE_BOSS_CMN_STOMPED.wav";
+		sfx.play();
+		if(thisChar.currHP <= 0){
+			var audio = document.getElementById("scream");
+			audio.volume = 1.0; audio.currentTime = 0;
+				document.getElementById('scream').play();
+				gold += 2;
+				player.currHP+=10;
+				var audio = document.getElementById("throw");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('throw').play();
+			var audio = document.getElementById("ow");
+			audio.volume = 0.0; audio.currentTime = 0;
+				document.getElementById('ow').pause();
+				var audio = document.getElementById("slap");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('slap').play();
 			if(thisChar.type != "boss"){
 				thisChar.drop();
 				monsters.splice(thisChar.index, 1);
@@ -44,12 +56,12 @@ function attack(thisChar){
 			}else{
 				var audio = document.getElementById("myaudio");
 				audio.volume = 0.0; audio.currentTime = 0;
-	
+
 				var audio = document.getElementById("menu");
 				audio.volume = 0.0; audio.currentTime = 0;
 		
 				
-				setTimeout(function(){ window.location.replace("Saved.html");}, 0000);
+			
 			}
 		}
 	} 

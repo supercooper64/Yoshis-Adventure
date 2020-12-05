@@ -24,7 +24,11 @@ function openShop(index){
 	audio.play();
 
 }
+function openEnd(index){
 
+
+	openEnd(index);
+}
 function testVar(output){
 	console.log(output);
 }

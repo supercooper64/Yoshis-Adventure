@@ -12,8 +12,8 @@ var shopRef = [
 	[
 		assignItem(invMaster["Zora's Potion"]),
 		assignItem(invMaster["MaxPotion"]),
-	    assignItem(invMaster["EGELSTON"]),
-	    assignItem(invMaster["SUPER YOSHI"]),
+	    assignItem(invMaster["FURIOUS FALCONER"]),
+	    assignItem(invMaster["SUPER SAIYAN YOSHI"]),
 		assignItem(invMaster["Potion"])
 	]
 ];

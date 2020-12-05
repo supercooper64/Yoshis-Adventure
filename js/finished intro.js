@@ -105,7 +105,7 @@ var runIntro = function(){
     setTimeout(function(){
       var audio = document.getElementById("myaudio");
       audio.volume = 1.0; audio.currentTime = 0;
-    }, 7000);
+    }, 00);
   };
 
 
@@ -136,14 +136,14 @@ var runIntro = function(){
       camera.position.z = 00;
 
       runOnce = true;
-    }, 1500);
+    }, 00);
  
     setTimeout(function(){
       var bg = document.getElementById('bg');
       bg.style.display = "block";
       // document.body.style.background = "url('https://anonimag.es/i/editedzeldabge4c28.png') no-repeat center center fixed";
       // document.body.style.backgroundSize = "cover";
-    },2200);
+    },0);
 
   }
 
@@ -151,7 +151,7 @@ var runIntro = function(){
   // Render out the scene.
   var render = function () {
     requestAnimationFrame( render );
-
+    flashBackground();
     if(pivot1.position.x < -105){
       pivot1.position.x += speedSlide;
       pivot1.rotation.y -= speedRotation;

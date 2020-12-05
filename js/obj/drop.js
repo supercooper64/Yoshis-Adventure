@@ -29,13 +29,15 @@ function drop(x, y, type, value){
 	
 	this.claimDrop = function(){
 		if(this.dType == 0){
-			gold += this.value;
+			gold += 23;
 			console.log(this.value);
-			var audio = new Audio('nsmb_smw2_redcoin.wav');
-			audio.play();
+			document.getElementById('coin').play();
+			var audio = document.getElementById("coin");
+		audio.volume = 1.0; audio.currentTime = 0;
 		}else{
-			var audio = new Audio('nsmbwiiRedCoinAll.wav');
-			audio.play();
+			document.getElementById('allcoin').play();
+			var audio = document.getElementById("allcoin");
+		audio.volume = 1.0; audio.currentTime = 0;
 			 player.currHP += this.value;
 			if(player.currHP > player.maxHP){
 				player.currHP += this.value;

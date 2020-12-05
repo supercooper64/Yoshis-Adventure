@@ -78,8 +78,11 @@ function dialogue(thisChar){
 	if(player.inDialogue
 	&& thisChar.inDialogue
 	&& thisChar.diaEnd
+	
 	){
-		var audio = new Audio('music/yoshi5.wav');
+		var audio = document.getElementById("throw");
+		audio.volume = 0.0; audio.currentTime = 0;
+			document.getElementById('throw').play();	var audio = new Audio('music/yoshi5.wav');
 					audio.play();
 		endDialogue(thisChar);
 	}
@@ -91,16 +94,47 @@ function advanceDia(thisChar){
 	if(!waiting){
 		thisChar.inDialogue = true;
 		player.inDialogue = true;
-		
+		var audio = document.getElementById("throw");
+		audio.volume = 0.0; audio.currentTime = 0;
+			document.getElementById('throw').play();
 		if(thisChar.type == "chest" && !thisChar.opened){
 			if(thisChar.prizeType == 0){
 			
 				addGold(thisChar.prizeValue);
 			}else{
-				var audio = new Audio('Secret Sound (The Legend of Zelda Ocarina of Time).mp3');
-				audio.play();
+				var audio = document.getElementById("found item 2");
+				audio.volume = 1.0; audio.currentTime = 0;
+
+					document.getElementById('found item 2').play();
+	
 				var audio = new Audio('Yoshi Yoshi.mp4');
 			audio.play();
+			var audio = document.getElementById("ow");
+			audio.volume = 0.0; audio.currentTime = 0;
+				document.getElementById('ow').play();
+				var audio = document.getElementById("scream");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("throw");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('throw').play();
+					document.getElementById('scream').play();
+					var audio = document.getElementById("shell");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('shell').play();
+			setTimeout(function(){ 	endDialogue(thisChar); var audio = document.getElementById("ow");
+			audio.volume = 0.0; audio.currentTime = 0;
+				document.getElementById('ow').play();
+				var audio = document.getElementById("scream");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("throw");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('throw').play();
+					document.getElementById('scream').play();
+					var audio = document.getElementById("shell");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('shell').play(); }, 2000);
+			thisChar.inDialogue = true;
+		player.inDialogue = true;
 				addItem(thisChar.prizeValue);
 			}
 			thisChar.opened = true;
@@ -362,8 +396,9 @@ function getCallBackStop(output, index){
 	var audio = new Audio('music/Yay.wav');
 	audio.play();
 	$("#btnBox").hide();
-	var audio = new Audio('nsmbwiiMenuCancel.wav');
-	audio.play();
+	document.getElementById('audiotag1').play();
+	var audio = document.getElementById("audiotag1");
+audio.volume = 1.0;
 
 	endDialogue(npcs[index]);
 }

@@ -23,14 +23,47 @@ $(document).ready(function(){
 
 			var audio = document.getElementById("menu");
 			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = new Audio('SE_RC_PAUSE_OFF.wav');
-			audio.play();
+			var audio = document.getElementById("pause");
+			audio.volume = 0.0; audio.currentTime = 0;
+			var audio = document.getElementById("pause end");
+			audio.volume = 1.0; audio.currentTime = 0;
+				document.getElementById('pause end').play();
+				document.getElementById('audiotag2').play();
+				var audio = document.getElementById("audiotag2");
+			audio.volume = 0.0; audio.currentTime = 0;
+				document.getElementById('pause').play();
+				var audio = document.getElementById("throw");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('throw').play();
 					closeMenu();
+					player.attackMode = true;
 				}else if(state > 9){
-					var audio = new Audio('SE_RC_PAUSE_ON.wav');
-					audio.play();
+					var audio = document.getElementById("pause end");
+			audio.volume = 0.0; audio.currentTime = 0;
+				document.getElementById('pause end').play();
+				var audio = document.getElementById("pause");
+				audio.volume = 1.0; audio.currentTime = 0;
+				var audio = document.getElementById("ow");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('ow').play();
+					var audio = document.getElementById("scream");
+					audio.volume = 0.0; audio.currentTime = 0;
+					var audio = document.getElementById("throw");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('throw').play();
+						document.getElementById('scream').play();
+						var audio = document.getElementById("shell");
+						audio.volume = 0.0; audio.currentTime = 0;
+							document.getElementById('shell').play();
+					document.getElementById('pause').play();
 					openMenu();
-		
+					var audio = document.getElementById("attack");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('attack').play();
+					var audio = document.getElementById("slap");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('slap').play();
+					player.attackMode = false;
 				}
 			}
 			
@@ -39,8 +72,12 @@ $(document).ready(function(){
 			}
 			
 			if(e.which == 90 || e.which == 77){
-				var audio = new Audio('music/pick_up.wav');
-				audio.play();
+				var audio = document.getElementById("attack");
+				audio.volume = 1.0; audio.currentTime = 0;
+					document.getElementById('attack').play();
+				var audio = document.getElementById("slap");
+				audio.volume = 1.0; audio.currentTime = 0;
+					document.getElementById('slap').play();
 				//Z or M Key
 				player.attackMode = true;
 				for(var i =0; i < monsters.length; i++){
@@ -52,7 +89,7 @@ $(document).ready(function(){
 			if(state == stateMenu){
 				menuControl(e.which);
 			}
-			
+	
 			//Shop Control
 			if(state == stateShop){
 			
@@ -97,6 +134,7 @@ const stateWasteOut = 29;
 const stateNecro1 = 31;
 const stateNecro2 = 32;
 const stateNecro3 = 33;
+const stateFinish = 20;
 const stateCastle = 38;
 
 const testState = 1;
@@ -128,7 +166,7 @@ function startGame() {
 	var audio = document.getElementById("menu");
 	audio.volume = 1.0; audio.currentTime = 0;
 	//Creates player character
-	player = new character("PikaYoshi", 27,31, 270, 150, "img/Yoshi Repair.png");
+	player = new character("Yoshi", 27,31, 270, 150, "img/Yoshi Repair.png");
 	cursor = new cursor(10,10);
 	
 	//Builds scene based on where you start		alert("Hello! I am an alert box!!");
@@ -207,6 +245,8 @@ function checkAction(){
 	}else if(state == stateShop){
 		checkShop();
 	}
+
+
 	//Check range of event
 	/*
 		Chests

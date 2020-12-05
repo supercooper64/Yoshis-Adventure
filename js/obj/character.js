@@ -33,7 +33,7 @@ function character(name, width, height, x, y, image){
 	this.hit = false;
 	this.hitCounter =9;
 	this.maxHP = 1000;
-	this.currHP = 300;
+	this.currHP = 10;
 	this.equippedWeapon = assignItem(invMaster["Wooden Sword"]);
 	this.equippedArmor = assignItem(invMaster["Leather Vest"]);
 	this.update = function() {
@@ -81,7 +81,7 @@ function character(name, width, height, x, y, image){
 			
 			ctx.save();
 			if(this.hit){
-				ctx.globalAlpha = 0.5;
+				ctx.globalAlpha = 1;
 			}else{
 				ctx.globalAlpha = 1;
 			}

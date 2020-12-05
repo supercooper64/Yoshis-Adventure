@@ -75,8 +75,7 @@ function updateScene_menu(){
 }
 
 function openMenu(){
-	var audio = new Audio('nsmbwiiMenuChoose.wav');
-	audio.play();
+
 
 	var audio = document.getElementById("menu");
 	audio.volume = 0.0; audio.currentTime = 0;
@@ -134,13 +133,15 @@ function menuControl(key){
 	
 	if(menuLevel == 2 &&  menuIndex < currMenu.length){
 		checkItem(currMenu[menuIndex].value, 1);
-		var audio = new Audio('nsmbwiiMenuChoose.wav');
-		audio.play();
+		document.getElementById('audiotag2').play();
+	var audio = document.getElementById("audiotag2");
+audio.volume = 1.0; audio.currentTime = 0;
 		showStat = true;
 	}else if(menuLevel == 3 &&  menuIndex < currMenu.length){
 		checkItem(currMenu[menuIndex].value, 2);
-		var audio = new Audio('nsmbwiiMenuChoose.wav');
-		audio.play();
+		document.getElementById('audiotag2').play();
+		var audio = document.getElementById("audiotag2");
+	audio.volume = 1.0; audio.currentTime = 0;
 		showStat = true;
 	}else{
 		showStat = false;
@@ -154,8 +155,9 @@ function checkMenu(){
 			currMenu = [];
 			for(var i = 0; i < inventory.length; i++){
 				if(inventory[i].type == menuIndex){
-					var audio = new Audio('nsmbwiiMenuChoose.wav');
-				audio.play();
+					document.getElementById('audiotag2').play();
+					var audio = document.getElementById("audiotag2");
+				audio.volume = 1.0; audio.currentTime = 0;
 					currMenu.push(inventory[i]);
 				}
 			}
@@ -169,8 +171,9 @@ function checkMenu(){
 
 			var audio = document.getElementById("menu");
 			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = new Audio('nsmbwiiMenuCancel.wav');
-			audio.play();
+			document.getElementById('audiotag1').play();
+			var audio = document.getElementById("audiotag1");
+		audio.volume = 1.0;
 		}else if (menuIndex == 5){
 			//Exit Game
 			var audio = document.getElementById("myaudio");
@@ -178,18 +181,20 @@ function checkMenu(){
 	
 			var audio = document.getElementById("menu");
 			audio.volume = 0.0; audio.currentTime = 0;
-			var audio = new Audio('nsmbwiiToadMessage.wav');
-				audio.play();
+			document.getElementById('byebye').play();
+			var audio = document.getElementById("byebye");
+		audio.volume = 1.0; audio.currentTime = 0;
 				var audio = document.getElementById("myaudio");
 				audio.volume = 0.0;
-					setTimeout(function(){ window.location.replace("Title.html");}, 1000);
+					setTimeout(function(){ window.location.replace("Title Screen.html");}, 1000);
 			scrollOffset = 0;
 			cursor.visible = false;
 		}
 	}else if(menuIndex == currMenu.length){
 		//Back button is clicked inside a sub menu
-		var audio = new Audio('nsmbwiiMenuCancel.wav');
-		audio.play();
+		document.getElementById('audiotag1').play();
+		var audio = document.getElementById("audiotag1");
+	audio.volume = 1.0;audio.currentTime = 0;
 		menuIndex = 0;
 		menuLevel = 0;
 		scrollOffset = 0;
@@ -200,8 +205,9 @@ function checkMenu(){
 		currMenu = [];
 		for(var i = 0; i < inventory.length; i++){
 			if(inventory[i].type == menuLevel-1){
-				var audio = new Audio('nsmbwiiMenuChoose.wav');
-				audio.play();
+				document.getElementById('audiotag2').play();
+				var audio = document.getElementById("audiotag2");
+			audio.volume = 1.0; audio.currentTime = 0;
 				currMenu.push(inventory[i]);
 			}
 		}

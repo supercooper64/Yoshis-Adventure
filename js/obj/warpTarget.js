@@ -14,6 +14,7 @@ function warp(isTall, isLow, val, scScene, tarScene, changeMusic= false, hasDoor
 	//TEST
 	this.warpActivate = function() {
 		fadeOut(this.targetScene, this.targetX, this.targetY);
+	
     }
 	this.update = function() {
 		//ctx.fillStyle = "rgba(66, 244, 235, 0.3)";
@@ -53,10 +54,23 @@ function warp(isTall, isLow, val, scScene, tarScene, changeMusic= false, hasDoor
 function fadeOut(tarScene, newX, newY){
 	$("#mainCanvas").fadeOut(fadeTime, function(){
 			state = tarScene;
-		
-
+			var audio = document.getElementById("ow");
+			audio.volume = 0.0; audio.currentTime = 0;
+			var audio = document.getElementById("scream");
+			audio.volume = 0.0; audio.currentTime = 0;
+			var audio = document.getElementById("throw");
+			audio.volume = 0.0; audio.currentTime = 0;
+			var audio = document.getElementById("shell");
+			audio.volume = 0.0; audio.currentTime = 0;
 			var audio = document.getElementById("menu");
 			audio.volume = 0.0; audio.currentTime = 0;
+			document.getElementById('key').play();
+					var audio = document.getElementById("key");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("found item 2");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("found item");
+				audio.volume = 0.0; audio.currentTime = 0;
 			buildScenes();
 			player.x = newX;
 			player.y = newY;

@@ -22,7 +22,7 @@ function monster(value, width, height, moveType, maxHp, image){
 	this.frameY = 0;
 	
 	//Might use later.
-	this.canMove = true;
+	this.canMove = false;
 	
 	//Battle Stats
 	this.maxHP = maxHp;
@@ -55,8 +55,11 @@ function monster(value, width, height, moveType, maxHp, image){
 				this.frameX = this.frameX+this.w;
 				if(this.frameX > (this.w * 3)){
 					this.frameX = 0;
-					var audio = new Audio('SE_BOSS_CMN_SMART_SHELL_ROLL.wav');
-					audio.play();
+					var audio = document.getElementById("shell");
+					audio.volume = 1.0; audio.currentTime = 0;
+						document.getElementById('shell').play();
+
+
 				}
 			frameCounter = 0;
 			}
