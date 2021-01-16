@@ -65,6 +65,7 @@ h2{
                  span{
                     font-size: 25px;
                  }
+
             </style>
 	<body>
 <br><br><br><br><br>
@@ -75,6 +76,7 @@ h2{
         font-weight: normal;     color: #0b9c10;">Yoshi's Adventure</h2>
 			<div class="disclaimer">
                 <a href="javascript:play_dat_sound();"><h1> Play Game</h1></a>
+                <a href="javascript:play_credits_sound();"><h1>Credits</h1></a>
                 <a href="javascript:play_faq_sound();"><h1>Frequently Asked Questions</h1></a>
                 <a href="javascript:play_next_sound();"><h1> Contact Us</h1></a>
                 <a href="javascript:play_site_sound();"><h1> Go to DJ STUDIO's Website</h1></a>
@@ -111,11 +113,22 @@ h2{
                     audio.volume = 0.0;
                                              setTimeout(function(){ window.location.replace("Frequently Asked Questions Yoshi.html");}, 1000);
                                            }
+
+                                           function play_credits_sound() {
+                                            document.getElementById('audiotag1').play();
+                                             var audio = document.getElementById("myaudio");
+                    audio.volume = 0.0;
+                                             setTimeout(function(){ window.location.replace("End Credits Yoshi.html");}, 1000);
+                                           }
+
                                            function play_site_sound() {
                                              document.getElementById('audiotag3').play();
                                              var audio = document.getElementById("myaudio");
                     audio.volume = 0.0;
-                                             setTimeout(function(){ window.location.replace("https://welcome-to-my-world.glitch.me/Login.html");}, 1000);
+                                             setTimeout(function(){ window.location.replace("../Index.html");}, 1000);
                                            }
 </Script>
 	
+<!--
+    linear-gradient(black, blue);
+-->
