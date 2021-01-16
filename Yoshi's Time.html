@@ -4,8 +4,6 @@
 Loading...
 </title>
 
-
-<meta http-equiv="refresh" content="7; url=Title.html">
 </head>
 
     <style>
@@ -14,90 +12,79 @@ Loading...
                 color: rgb(0, 0, 0);
                 font-family: 'PikaYoshi'; 
                 font-weight: normal;
+                text-align: center;
             }
-    h3{
-        font-weight: normal;
-        font-family: 'PikaYoshi'; 
-    }
+
     @font-face { 
   font-family: 'PikaYoshi'; 
   font-weight: normal;
 src: url('waYoshi.ttf'); 
 }
+
+h2{
+                font-size: 62px; 
+                font-weight: normal;
+             }
+             a{
+                color: rgb(0, 0, 0); font-family: 'PikaYoshi'; 
+
+}    h3{ 
+    color: rgb(0, 0, 0); 
+                  font-size: 35px;  font-family: 'PikaYoshi'; 
+                  font-weight: normal;
+              }
+          
+              p{            color: rgb(0, 0, 0);  font-family: 'PikaYoshi'; 
+              font-size: 25px;    font-weight: normal;
+              }
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: rgb(0, 0, 0);    }
+    49%{    color: rgb(0, 0, 0); }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100% {    color:transparent;  }
+}
         </style>
         <body>
-    <EMBED SRC = "Level Won (The Legend of Zelda Twilight Princess).wav" hidden = "true" loop = "true"><BR>
+            <audio id="audiotag2" src="nsmbwiiMenuChoose.wav" preload="auto"></audio>
+            <div class="padd">
+                <br>    <br>  
+                <h2>Yoshi's Adventure</h2>
+                  <BR> 
+                  </div>
 
-<center>
-
-<div class="padd">
-<h2>NOTE: The music, images or  other forms of assets used in this unlicensed and unofficial Javascript program are not owned by the administrator.</h2><BR>
-<h3><BR>The music, game images and Yoshi voice clips are owned or registered by Nintendo, Lucasfilm and other third party assets.<BR> Thank you for understanding.
-    <br>
-
-        <BR>  <BR> -Cooper and DJ Studio</h3>
-            <div align="center">
-<EMBED SRC = "M&LPITYoshiSprite.png"  width = "100" height = "100" align = "center"></div>
-    <h3>PRESS ANY KEY TO PROCEED TO YOSHI HYRULE </h3>
-</div>
-<h3> Music Credits:</h3> 
-<h3> Home Page: <br>Xuanyuan Jian Canwaizhuan: Battle 2 ( SMW Soundfont)</h3>
-<h3>About Page: <Br>Star Wars Episode VII: A New Hope: Cantina (SMW Soundfont)</h3>  
-<h3> Game Home Page: <br>Treasure Hunter G: Go Red Team, Go White Team (SMW Soundfont)</h3>
-<h3> Forest, Ruins and Mountain: <br> Mamorukun Curse: Karakuri Spirits (SMW and Yoshi's Island Soundfonts)</h3>
-<h3> FAQ: <br>The Beatles: Eleanor Rigby Theme <br>(Super Mario World, Yoshis Island and Legend of Zelda Link of the Past Soundfont)</h3>
-<h3> Contact Us: <br> Legend of Zelda: A Link Between Worlds: Lorule Castle <br>(Legend of Zelda Link of the Past and SMW Soundfonts)</h3>
-<h3> Ending: <br> Legend of Zelda: Majoras Mask: Song of Healing <Br>(SMW and Yoshi's Island Soundfont)</h3>
-<h3> Boss: Romancing SaGa 2: Last Battle (SMW Soundfont)</h3>
-
-</font>
-</center>
-</body>
-<Script>
-    document.addEventListener('keypress',function(){
-
-document.location.assign('Title.html');
-});
-</Script>
-</html>
-
-               <!-- <title>Pig Game</title>
-    </head>
-  $cover.append($section1);
-  let buttonMessage = currentLevel < levels.length - 1 && win ? "Continue?" : ""
-  const classList = win && currentLevel === 2 ? 'start-button show-choice' : 'start-button'
-  $cover.innerHTML += `<div class="cover__section cover__section--buttons"><button class="${classList}">${buttonMessage}</button></div>`;
-    <body>
-        <div class="wrapper clearfix">
-            <div class="player-0-panel active">
-                <div class="player-name" id="name-0">Player 1</div>
-                <div class="player-score" id="score-0">43</div>
-                <div class="player-current-box">
-                    <div class="player-current-label">Current Roll</div>
-                    <div class="player-current-score" id="current-0">11</div>
-                </div>
+             <h3 class="blinking">PRESS ANY KEY TO PROCEED </h3>
+             <br>    
+             <h3>This game was made by: <br> DJ STUDIO and Cooper Columbus</h3>
+            
             </div>
             
-            <div class="player-1-panel">
-                <div class="player-name" id="name-1">Player 2</div>
-                <div class="player-score" id="score-1">72</div>
-                <div class="player-current-box">
-                    <div class="player-current-label">Current Roll </div>
-                    <div class="player-current-score" id="current-1">0</div>
-                </div>
-            </div>
+            </font>
+            </center>
+            </body>
+            <Script>
             
-            <button class="btn-new"><i class="ion-ios-plus-outline"></i> New Game<BR> <BR> </button><a href ="Home Page.HTML">Home</a></button>
-            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button><BR> <BR> 
-        
-         
+                document.addEventListener('keypress',function(){
             
-            <img src="dice-5.png" alt="Dice" class="dice" id="dice-1">
-            <img src="dice-5.png" alt="Dice" class="dice" id="dice-2">
-        </div>
-        -->
-   
+                  document.getElementById('audiotag2').play();
+                  setTimeout(function(){document.location.assign('Title.html');}, 1000);
+                  
+            });
+            
+            
+            
+            
+            function play_dat_sound() {
+             
+                  document.getElementById('audiotag1').play();
+                  setTimeout(function(){ window.location.replace("Home Page.html");}, 1000);
+                }
+            </Script>
+            </html>
 
 
 
