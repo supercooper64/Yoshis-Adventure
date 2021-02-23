@@ -1,16 +1,28 @@
 canvas {
-	border: 0px solid #0F380F;
-	background-color:rgb(207, 192, 107);
-		width:1870px;
-	height: 870px;
+
+	background: url("../img/SMAS_SMB3_Big_Empty_Block.png");
+	height: 100vh;
+    width: 1920px;
+    padding: 0px;
+    margin: -8px;
+	border: 0;
+	background-size: 80px;
+	overflow: hidden;
+	image-rendering: smooth;
+
 	font-family: "Egelston";
 }
 font-face{
 	font-family: "Egelston";
 	font-weight:normal;
-	src: ('wayoshi.ttf')
+	src: url("../Animaniacs.ttf");
+}
+font-face{
+	font-family: "WAY";
+	font-weight:normal;
+	src: url("wayoshi.ttf");
 }
 body{
-	background-color:rgb(207, 192, 107);
-	font-family: "Egelston";
+	background-color: rgb(207, 192, 107);
+	text-align: center;
 }
