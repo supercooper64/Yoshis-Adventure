@@ -1,6 +1,6 @@
 # Yoshi's Adventure (ROM HACK OF HTML5 Game)
 
-A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game, featuring music from Xuanyuan Jian Canwaizhuan, Legend of Zelda: A Link Between Worlds, Treasure Hunter G, Star Wars Episode VII: A New Hope, Romancing Saga 2, The Beatles, and Mamorukun Curse.
+A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game, featuring music from Xuanyuan Jian Canwaizhuan, Legend of Zelda: A Link Between Worlds, Treasure Hunter G, Star Wars Episode VII: A New Hope, Romancing Saga 2, The Beatles, LINE Cookie Run, Sonic Pinball Party, Garfield: Caught in the Act, and Mamorukun Curse.
 
 # What's new in Version 2.0.3?
 
@@ -86,7 +86,7 @@ A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game, featu
 
 - The Walking Dead: Zombie Horses, as well as the Zombie Scourage, are references to this show.
 
-- Sonic Spinball Party: The Neo Green Hill Zone theme is used in this game for Yoshyrule, the opening area.
+- Sonic Spinball Party: The Neo Green Hill Zone theme is used in this game for Yoshyrule, the main area.
 
 - Star Wars franchise: The word, "May Yoshyrule Be With You!", is a reference to this franchises's "May the Force Be With You" phrase.
 
