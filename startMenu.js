@@ -1,5 +1,10 @@
 
 function updateScene_startMenu(){
+	
+	ctx.beginPath();
+	ctx.rect(0, 0, 9999, 9999);
+	ctx.fillStyle = "rgb(207, 192, 107)";
+	ctx.fill();
 	ctx.font = "32px Egelston";
 	ctx.fillStyle = "black";
 	ctx.fillText("Yoshi's Adventure",199,40);
@@ -15,25 +20,16 @@ function updateScene_startMenu(){
 //Formerly startGame1
 function newGame(){
 
-	var audio = document.getElementById("myaudio");
-	audio.volume = 1.0; audio.currentTime = 0;
-	var audio = document.getElementById("shop");
-	audio.volume = 0.0; audio.currentTime = 0;
-	var audio = document.getElementById("menu");
-	audio.volume = 0.0; audio.currentTime = 0;
-	var audio = document.getElementById("Thomas");
-	audio.volume = 0.0; audio.currentTime = 0;
-	var audio = document.getElementById("Mountain");
-	audio.volume = 0.0; audio.currentTime = 0;
+
 	var audio = new Audio('music/yoshi1.wav');
 	audio.play();
 	var audio = new Audio('nsmbwiiStartLevel.wav');
 	audio.play();
-	player.currHP = player.maxHP
+	player.currHP = player.maxHP;
 	
 	$("#mainCanvas").fadeOut(fadeTime, function(){
 		state = stateTown;
-		
+
 		buildScenes(true)
 		$("#mainCanvas").fadeIn(fadeTime);
 	});
