@@ -25,7 +25,10 @@ var cursorX = 0;
 var cursorY = (shopIndex*40 + 100)-17;
 
 function updateScene_shop(){
-
+	ctx.beginPath();
+	ctx.rect(0, 0, 9999, 9999);
+	ctx.fillStyle = "rgb(207, 192, 107)";
+	ctx.fill();
 	ctx.font = "22px Egelston";
 	ctx.fillStyle = "black";
 	ctx.fillText("Purchase",10,50);

@@ -34,7 +34,7 @@ function character(name, width, height, x, y, image){
 	this.hitCounter =9;
 	this.maxHP = 1000;
 	this.currHP = 10;
-	this.equippedWeapon = assignItem(invMaster["Wooden Sword"]);
+	this.equippedWeapon = assignItem(invMaster["Smash"]);
 	this.equippedArmor = assignItem(invMaster["Leather Vest"]);
 	this.update = function() {
 		if(state > 9){

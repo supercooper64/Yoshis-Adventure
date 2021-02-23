@@ -24,6 +24,7 @@ function openShop(index){
 	audio.play();
 
 }
+
 function openEnd(index){
 
 

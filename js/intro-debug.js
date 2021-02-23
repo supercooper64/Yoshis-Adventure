@@ -101,10 +101,11 @@ var runIntro = function(){
 
   var playAudio = function(){
     // Used to delay the audio by 0.5 seconds.
-  
+  	var audio = document.getElementById("shine");
+	audio.volume = 1.0; audio.currentTime = 0;
+	document.getElementById('shine').play();
     setTimeout(function(){
-      var audio = document.getElementById("myaudio");
-      audio.volume = 1.0; audio.currentTime = 0;
+   window.location.replace("Title Screen.html");
     }, 7000);
   };
 

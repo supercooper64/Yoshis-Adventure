@@ -18,7 +18,7 @@ function dialogue(thisChar){
 	3 - Iterated
 	*/
 	
-	var range = 44;
+	var range = 39;
 	
 	//Checks if this character is within range of player and if SPACE bar has been pressed and is up.
 	if(distX <= range 
@@ -66,10 +66,21 @@ function dialogue(thisChar){
 		}else if(distY > hDiff){
 			thisChar.frameY = 0;
 		}
-		
-		
-		//If true, then we advance the dialogue.
+		var audio = document.getElementById("ow");
+		audio.volume = 0.0; audio.currentTime = 0;
+			document.getElementById('ow').play();
+			var audio = document.getElementById("scream");
+			audio.volume = 0.0; audio.currentTime = 0;
+			var audio = document.getElementById("throw");
+			audio.volume = 0.0; audio.currentTime = 0;
+				document.getElementById('throw').play();
+				document.getElementById('scream').play();
+				var audio = document.getElementById("shell");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('shell').play(); 
 
+		//If true, then we advance the dialogue.
+	
 		advanceDia(thisChar);
 	}
 	
@@ -80,23 +91,44 @@ function dialogue(thisChar){
 	&& thisChar.diaEnd
 	
 	){
-		var audio = document.getElementById("throw");
+		var
+		 audio = document.getElementById("throw");
 		audio.volume = 0.0; audio.currentTime = 0;
-			document.getElementById('throw').play();	var audio = new Audio('music/yoshi5.wav');
-					audio.play();
+			document.getElementById('throw').play();	
+			var audio = document.getElementById("note");
+			audio.volume = 0.0; audio.currentTime = 0;
 		endDialogue(thisChar);
+	
+		document.getElementById('yoshi').play();
+		var audio = document.getElementById("yoshi");
+	audio.volume = 0.0; audio.currentTime=0;
 	}
 	
 }
 
 function advanceDia(thisChar){
+
 	diaLine2 = "";
 	if(!waiting){
 		thisChar.inDialogue = true;
+		player.attackMode = false;
+	this.attackMode = false;
 		player.inDialogue = true;
-		var audio = document.getElementById("throw");
+		var audio = document.getElementById("ow");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('ow').play();
+					var audio = document.getElementById("scream");
+					audio.volume = 0.0; audio.currentTime = 0;
+					var audio = document.getElementById("throw");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('throw').play();
+						document.getElementById('scream').play();
+						var audio = document.getElementById("shell");
+						audio.volume = 0.0; audio.currentTime = 0;
+							document.getElementById('shell').play(); 
+		var audio = document.getElementById("note");
 		audio.volume = 0.0; audio.currentTime = 0;
-			document.getElementById('throw').play();
+
 		if(thisChar.type == "chest" && !thisChar.opened){
 			if(thisChar.prizeType == 0){
 			
@@ -104,11 +136,18 @@ function advanceDia(thisChar){
 			}else{
 				var audio = document.getElementById("found item 2");
 				audio.volume = 1.0; audio.currentTime = 0;
-
+				document.getElementById('yoshi').play();
+				var audio = document.getElementById("yoshi");
+			audio.volume = 0.0; audio.currentTime=0;
 					document.getElementById('found item 2').play();
+					document.getElementById('yoshi').play();
 	
-				var audio = new Audio('Yoshi Yoshi.mp4');
-			audio.play();
+			
+				
+				
+				var audio = document.getElementById("yoshi yoshi");
+					audio.volume = 1.0; audio.currentTime = 0;
+						document.getElementById('yoshi yoshi').play();
 			var audio = document.getElementById("ow");
 			audio.volume = 0.0; audio.currentTime = 0;
 				document.getElementById('ow').play();
@@ -118,6 +157,8 @@ function advanceDia(thisChar){
 				audio.volume = 0.0; audio.currentTime = 0;
 					document.getElementById('throw').play();
 					document.getElementById('scream').play();
+					
+					
 					var audio = document.getElementById("shell");
 					audio.volume = 0.0; audio.currentTime = 0;
 						document.getElementById('shell').play();
@@ -135,16 +176,45 @@ function advanceDia(thisChar){
 						document.getElementById('shell').play(); }, 2000);
 			thisChar.inDialogue = true;
 		player.inDialogue = true;
+
 				addItem(thisChar.prizeValue);
 			}
 			thisChar.opened = true;
 		}
 		
 		if(thisChar.type == "door"){
-
+			document.getElementById('note').play();
+			var audio = document.getElementById("note");
+		audio.volume = 1.0; audio.currentTime = 0;
+		var audio = document.getElementById("ow");
+			audio.volume = 0.0; audio.currentTime = 0;
+				document.getElementById('ow').play();
+				var audio = document.getElementById("scream");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("throw");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('throw').play();
+					document.getElementById('scream').play();
+					var audio = document.getElementById("shell");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('shell').play(); 
 			thisChar.checkLock();
 		}
-		
+		if(thisChar.type == "npc"){
+		var audio = document.getElementById("ow");
+			audio.volume = 0.0; audio.currentTime = 0;
+				document.getElementById('ow').play();
+				var audio = document.getElementById("scream");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("throw");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('throw').play();
+					document.getElementById('scream').play();
+					var audio = document.getElementById("shell");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('shell').play(); 
+		}
+
 		//If random, gets a random line in the dialogue.
 		if(thisChar.diaType == 1){
 			var max = getMaxLabels(thisChar, "rdm");
@@ -184,9 +254,14 @@ function advanceDia(thisChar){
 				//First check: is it a comment (#) or blank line. If yes, skip this line and restart.
 				if(thisLine.substring(0,1) == "#"
 				|| thisLine.length < 1){
-					var audio = new Audio('music/yoshi5.wav');
-					audio.play();
+					document.getElementById('yoshi').play();
+					var audio = document.getElementById("yoshi");
+				audio.volume = 1.0; audio.currentTime = 0;
+	
 					advanceDia(thisChar);
+		
+				var audio = document.getElementById("note");
+				audio.volume = 0.0; audio.currentTime = 0;
 					return;
 				}
 				//Next: does this line call a function? If it does, call that function then restart.
@@ -194,12 +269,18 @@ function advanceDia(thisChar){
 					var tempStart = thisLine.indexOf("CALL") + 5;
 					var output = thisLine.substring(tempStart, thisLine.length);
 					getCallBack(output,thisChar.index);
+					document.getElementById('note').play();
+					var audio = document.getElementById("note");
+				audio.volume = 1.0; audio.currentTime = 0;
 					return;
 				}
 				if(thisLine.substring(0,4) == "CALS"){
 					var tempStart = thisLine.indexOf("CALS") + 5;
 					var output = thisLine.substring(tempStart, thisLine.length);
 					getCallBackStop(output,thisChar.index);
+					document.getElementById('note').play();
+					var audio = document.getElementById("note");
+				audio.volume = 1.0; audio.currentTime = 0;
 					return;
 				}
 				//Next: does this line change a label? If it does, change the then restart.
@@ -207,6 +288,9 @@ function advanceDia(thisChar){
 					var tempStart = thisLine.indexOf("GOTO") + 5;
 					var output = thisLine.substring(tempStart, thisLine.length);
 					changeLabel(output,thisChar.index);
+					document.getElementById('note').play();
+					var audio = document.getElementById("note");
+				audio.volume = 1.0; audio.currentTime = 0;
 					return;
 				}
 				//Next: Is this line a label? If it is, we're not supposed to go any farther so we end the dialogue here.
@@ -253,7 +337,8 @@ function advanceDia(thisChar){
 			}
 			
 		}else{
-		
+			var audio = document.getElementById("note");
+			audio.volume = 0.0; audio.currentTime = 0;
 			endDialogue(thisChar);
 		}
 		
@@ -271,6 +356,16 @@ function advanceDia(thisChar){
 }
 
 function endDialogue(thisChar){
+	var audio = document.getElementById("found item 2");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("found item");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("yoshi yoshi");
+	audio.volume = 0.0; audio.currentTime = 0;
+		document.getElementById('yoshi yoshi').play();
+		var audio = document.getElementById("yoshi yaha");
+		audio.volume = 0.0; audio.currentTime = 0;
+			document.getElementById('yoshi yaha').play();
 	player.inDialogue = false;
 	thisChar.inDialogue = false;
 	//Unless the dialogue is instructed to repeat the last line (2)
@@ -281,6 +376,7 @@ function endDialogue(thisChar){
 	//Repeat goes back by one to keep dialogue on last line.
 	else{
 		thisChar.diaCounter--;
+		
 	}
 	thisChar.diaEnd = false;
 	if(thisChar.flushLabel){
@@ -344,7 +440,10 @@ function createBtn(thisChar, thisLine){
 	}
 	
 	buttons.push([btnLabel,type,output,thisChar.index]);
-	
+	document.getElementById('yoshi').play();
+	var audio = document.getElementById("yoshi");
+audio.volume = 0.0; audio.currentTime=0;
+
 	advanceDia(thisChar);
 }
 //Changes label when input button is pressed.
@@ -357,6 +456,12 @@ function changeLabel(newLabel, index){
 	//change label
 	//Advance Dialogue
 	npcs[index].label = newLabel;
+	document.getElementById('note').play();
+					var audio = document.getElementById("note");
+				audio.volume = 1.0; audio.currentTime = 0;
+	document.getElementById('note').play();
+	var audio = document.getElementById("note");
+audio.volume = 0.0; audio.currentTime = 0;
 
 	advanceDia(npcs[index]);
 }
@@ -371,14 +476,18 @@ function getCallBack(output, index){
 	tempChar = index;
 	eval(output);
 	if(isButton){
-		var audio = new Audio('music/yoshi5.wav');
-        audio.play();
+		document.getElementById('yoshi').play();
+		var audio = document.getElementById("yoshi");
+	audio.volume = 1.0; audio.currentTime = 0;
+
 		npcs[index].diaCounter--;
 	}
 	waiting = false;
 	isButton = false;
 	displayDialogue = true;
-
+	document.getElementById('note').play();
+					var audio = document.getElementById("note");
+				audio.volume = 1.0; audio.currentTime = 0;
 	buttons=[];
 
 	advanceDia(npcs[index]);
@@ -396,9 +505,9 @@ function getCallBackStop(output, index){
 	var audio = new Audio('music/Yay.wav');
 	audio.play();
 	$("#btnBox").hide();
-	document.getElementById('audiotag1').play();
-	var audio = document.getElementById("audiotag1");
-audio.volume = 1.0;
+	document.getElementById('note').play();
+					var audio = document.getElementById("note");
+				audio.volume = 1.0; audio.currentTime = 0;
 
 	endDialogue(npcs[index]);
 }

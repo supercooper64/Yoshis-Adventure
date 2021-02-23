@@ -11,7 +11,7 @@ function statEvent( x, y, script){
 	this.inDialogue = false;
 	this.diaEnd = false;
 	this.diaCounter = 0;
-	this.label = "";
+	this.label = "fff";
 	this.canMove = true;
 	this.dialogue = [];
 	this.script = script;

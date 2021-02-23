@@ -82,6 +82,7 @@ $(document).ready(function(){
 				player.attackMode = true;
 				for(var i =0; i < monsters.length; i++){
 					attack(monsters[i]);
+	
 				}
 			}
 			
@@ -118,7 +119,7 @@ $(document).ready(function(){
 //PikaYoshi Egelston is a reference to good friend Alex Egelston and Pokemon character Pikachu.
 const stateGameOver = 0;
 const stateStart = 1;
-
+const stateDialogue = 0;
 const stateMenu = 5;
 const stateShop = 6;
 
@@ -147,7 +148,7 @@ var prevState = 1;
 var player;
 var cursor;
 var scrollOffset = 0;
-var fadeTime = 000;
+var fadeTime = 100;
 const keys = [];
 
 
@@ -156,11 +157,15 @@ var sfx = new Audio("SMA4-Acecoin.wav");
 
 
 function startGame() {
-	var audio = document.getElementById("myaudio");
-	audio.volume = 0.0; audio.currentTime = 0;
 	var audio = document.getElementById("Thomas");
 	audio.volume = 0.0; audio.currentTime = 0;
 	var audio = document.getElementById("Mountain");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("Ruins");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("Town");
 	audio.volume = 0.0; audio.currentTime = 0;
 
 	var audio = document.getElementById("menu");
@@ -181,7 +186,7 @@ function startGame() {
 	
 	gameArea.start();
 	
-	//warps[testWarp].warpActivate();
+	//warps[testWarp].warpActivate();background: url("../img/grass.png");
 }
 
 //This section builds the game area. Most of this was taken from a tutorial on W3 Schools
@@ -189,7 +194,7 @@ const gameArea = {
 	canvas : document.createElement("canvas"),
 	start : function() {
 		this.canvas.width = 600;
-		this.canvas.height = 400;
+		this.canvas.height = 420;
 		this.canvas.id = "mainCanvas";
 		this.context = this.canvas.getContext("2d");
 		document.body.insertBefore(this.canvas, document.body.childNodes[0]);
@@ -234,13 +239,20 @@ function updateGameArea(){
 
 function checkAction(){
 	if(state == stateGameOver){
-	
+		document.getElementById('yoshi').play();
+		var audio = document.getElementById("yoshi");
+	audio.volume = 0.0; audio.currentTime=0;
 		restart();
 	}else if(state == stateStart){
-
+		document.getElementById('yoshi').play();
+		var audio = document.getElementById("yoshi");
+	audio.volume = 0.0; audio.currentTime=0;
 		newGame();
 	
 	}else if(state == stateMenu){
+		document.getElementById('yoshi').play();
+		var audio = document.getElementById("yoshi");
+	audio.volume = 0.0; audio.currentTime=0;
 		checkMenu();
 	}else if(state == stateShop){
 		checkShop();
@@ -256,7 +268,16 @@ function checkAction(){
 	else if(state > 9){
 		for(var i =0; i < npcs.length; i++){
 			if(npcs[i].scene == state){
-		
+				var audio = document.getElementById("ow");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('ow').play();
+					var audio = document.getElementById("scream");
+					audio.volume = 0.0; audio.currentTime = 0;
+					var audio = document.getElementById("throw");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('throw').play();
+						document.getElementById('scream').play();
+					
 				dialogue(npcs[i]);
 			}
 		}
@@ -276,5 +297,21 @@ function checkAction(){
 		}
 	}
 	//Check Player in dialogue
+
 }
 
+$(document).ready(function () {
+	$(document).keydown(function (event) {
+		if (event.ctrlKey == true && (event.which == '107' || event.which == '109' || event.which == '187' || event.which == '189'))
+		 {
+			 event.preventDefault();
+		 }
+	 });
+
+		 $(window).bind('mousewheel DOMMouseScroll', function (event) {
+			 if (event.ctrlKey == true) {
+				 event.preventDefault();
+			 }
+
+	});
+})

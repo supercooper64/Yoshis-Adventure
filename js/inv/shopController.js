@@ -2,7 +2,7 @@ var shopRef = [
 	[
 		assignItem(invMaster["Potion"]),
 		assignItem(invMaster["Smash"]),
-		assignItem(invMaster["Zora's Potion"])
+		assignItem(invMaster["SUPER SAIYAN YOSHI"])
 	],
 	[
 		assignItem(invMaster["Potion"]),
@@ -27,10 +27,19 @@ function buyItem(item){
 	var cost = item.buy;
 	if(gold < cost){
 		console.log("I am sorry, you don't have enough Yoshi eggs.");
+		var audio = document.getElementById("tom and jerry");
+		audio.volume = 1.0; audio.currentTime = 0;
+			document.getElementById('tom and jerry').play();
+			var audio = document.getElementById("note");
+			audio.volume = 0.0; audio.currentTime = 0;
+				document.getElementById('note').play();
 	}else{
 		console.log("Thank you for your purchase, Yoshi ! See you soon!");
 		gold -= cost;
 		addItem(item);
+		var audio = document.getElementById("tom and jerry");
+audio.volume = 0.0; audio.currentTime = 0;
+	document.getElementById('tom and jerry').play();
 	}
 }
 

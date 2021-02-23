@@ -54,6 +54,9 @@ function warp(isTall, isLow, val, scScene, tarScene, changeMusic= false, hasDoor
 function fadeOut(tarScene, newX, newY){
 	$("#mainCanvas").fadeOut(fadeTime, function(){
 			state = tarScene;
+			var audio = document.getElementById("toad");
+			audio.volume = 1.0; audio.currentTime = 0;
+				document.getElementById('toad').play();
 			var audio = document.getElementById("ow");
 			audio.volume = 0.0; audio.currentTime = 0;
 			var audio = document.getElementById("scream");
@@ -64,6 +67,9 @@ function fadeOut(tarScene, newX, newY){
 			audio.volume = 0.0; audio.currentTime = 0;
 			var audio = document.getElementById("menu");
 			audio.volume = 0.0; audio.currentTime = 0;
+			var audio = document.getElementById("toad");
+			audio.volume =0.0; audio.currentTime = 0;
+				document.getElementById('toad').play();
 			document.getElementById('key').play();
 					var audio = document.getElementById("key");
 				audio.volume = 0.0; audio.currentTime = 0;
@@ -71,6 +77,9 @@ function fadeOut(tarScene, newX, newY){
 				audio.volume = 0.0; audio.currentTime = 0;
 				var audio = document.getElementById("found item");
 				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("yoshi yoshi");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('yoshi yoshi').play();
 			buildScenes();
 			player.x = newX;
 			player.y = newY;

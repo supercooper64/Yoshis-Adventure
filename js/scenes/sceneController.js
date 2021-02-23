@@ -48,10 +48,10 @@ function startScenes(){
 	chests.push(new chest(122,282, 123, assignItem(invMaster["FURIOUS FALCONER"]), stateWaste1));
 	chests.push(new chest(42,122, 1, assignItem(invMaster["Key"]), stateWaste2));
 
-	chests.push(new chest(442,42, 1, assignItem(invMaster["Key"]), stateNecro2));
+	chests.push(new chest(442,92, 1, assignItem(invMaster["Key"]), stateNecro2));
 
-	chests.push(new chest(52,42, 1, assignItem(invMaster["Key"]), stateCastle));
-	chests.push(new chest(452,57, 1, assignItem(invMaster["Key"]), stateNecro3));
+	chests.push(new chest(52,72, 1, assignItem(invMaster["Key"]), stateCastle));
+
 
 	//door(x, y, w, h, scene){
 	//doors.push(new door(250, 200, 80, 10, stateTown));
@@ -75,7 +75,7 @@ function startScenes(){
 	npcs.push(new npc(31, 31, 210, 85, 0, 0, "Help3", stateForest3, "img/NPC Red Yoshi.png", 4));
 	npcs.push(new npc(33, 31, 157, 156, 0, 0, "Help2", stateForest2, "img/NPC Red Yoshi.png", 2));
 	npcs.push(new npc(33, 31, 200, 91, 0, 0, "Help1", stateForest1, "img/NPC Red Yoshi.png", 2));
-	npcs.push(new npc(33, 31, 90, 41, 0, 0, "HelpNecro", stateNecro1, "img/NPC Red Yoshi.png", 2));
+	npcs.push(new npc(33, 31, 80, 78, 0, 0, "HelpNecro", stateNecro1, "img/NPC Red Yoshi.png", 0));
 	/*monsters.push(assignMon(bestMaster["Forest"]));
 	monsters[0].x = 250;
 	monsters[0].y = 150;	*/
@@ -86,8 +86,8 @@ function startScenes(){
 
 	npcs.push(new npc(33, 31, 324, 204, 0, 0, "wastea", stateWasteOut, "img/NPC Red Yoshi.png",2));
 	npcs.push(new npc(33, 31, 42, 290, 0, 0, "wasteb", stateWasteOut, "img/NPC Purple Yoshi.png",1));
-	npcs.push(new npc(33, 31, 200, 40, 0, 0, "wastec", stateWasteOut, "img/NPC Blue Yoshi.png", 4));
-	npcs.push(new npc(32, 32, 42, 52, 0, 0, "Alex's BFF", stateFinish, "img/hero.png"));
+	npcs.push(new npc(33, 31, 205, 170, 0, 0, "wastec", stateWasteOut, "img/NPC Blue Yoshi.png", 4));
+	npcs.push(new npc(32, 32, 42, 82, 0, 0, "Alex's BFF", stateFinish, "img/hero.png"));
 	//npcs.push(new npc(32, 32, 324, 202, 0, 0, "butcher", stateNcero3, "img/butcher.png"));
 	//npcs.push(new npc(32, 32, 282, 150, 0, 0, "queen", stateCastle, "img/Queen.png"));
 	
@@ -118,16 +118,275 @@ function startScenes(){
 	warps.push(new warp(true, true, 4, stateNecro2, stateNecro1));
 	warps.push(new warp(true, false, 4, stateNecro2, stateNecro3));
 	warps.push(new warp(true, true, 4, stateNecro3, stateNecro2));
-	warps.push(new warp(false, true, 6, stateNecro3, stateCastle, true,true));
-	warps.push(new warp(false, true, 5, stateCastle, stateFinish, true,true));
-	
+	warps.push(new warp(false, false, 6, stateNecro3, stateCastle,false, true));
+	warps.push(new warp(false, false, 6, stateCastle, stateFinish, true,true));
+	warps.push(new warp(false, true, 6, stateCastle, stateNecro3));
 	console.log("Scenes built");
 }
 
 function buildScenes(change) {
 	
+	if(state == stateFinish){
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 1.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 0.0; audio.currentTime=0;
+player.currTown="Princess Zora";
+	}
 
-	
+	if(state == stateForest2){
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 1.0; 
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Town').play();
+var audio = document.getElementById("Town");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 0.0; audio.currentTime=0;
+	}
+	if(state == stateWaste1){
+		player.currTown ="Swanson Sewers";
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Town').play();
+var audio = document.getElementById("Town");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Ruins').play();
+var audio = document.getElementById("Ruins");
+audio.volume = 1.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 0.0; audio.currentTime=0;
+
+	}
+	if(state == stateWaste3){
+		player.currTown ="Swanson Sewers";
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Town').play();
+var audio = document.getElementById("Town");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Ruins').play();
+var audio = document.getElementById("Ruins");
+audio.volume = 1.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 0.0; audio.currentTime=0;
+
+	}
+	if(state == stateForest1){
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 1.0; audio.currentTime=0;
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Town').play();
+var audio = document.getElementById("Town");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Ruins').play();
+var audio = document.getElementById("Ruins");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 0.0; audio.currentTime=0;
+player.currTown ="Fey Forest";
+
+
+	}
+	if(state == stateForest3){
+		player.currTown ="Fey Forest";
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 1.0; 
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Ruins').play();
+var audio = document.getElementById("Ruins");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 0.0; audio.currentTime=0;
+	}
+	if(state == stateTown){
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Town').play();
+var audio = document.getElementById("Town");
+audio.volume = 1.0; audio.currentTime=0;
+document.getElementById('Ruins').play();
+var audio = document.getElementById("Ruins");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 0.0; audio.currentTime=0;
+player.currTown ="Yoshyrule";
+
+	}
+	if(state == stateCastle){
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 1.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Town').play();
+var audio = document.getElementById("Town");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Ruins').play();
+var audio = document.getElementById("Ruins");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 0.0; audio.currentTime=0;
+player.currTown ="Castle";
+	}
+	if(state == stateForestOut){
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 1.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Ruins').play();
+var audio = document.getElementById("Ruins");
+audio.volume = 0.0; audio.currentTime=0;
+player.currTown ="Gasteyer Garden";
+	}
+	if(state == stateNecro1){
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Ruins').play();
+var audio = document.getElementById("Ruins");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 1.0; audio.currentTime=0;
+player.currTown ="Mulaney Madlands";
+	}
+	if(state == stateNecro2){
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Ruins').play();
+var audio = document.getElementById("Ruins");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 1.0; 
+player.currTown ="Mulaney Madlands";
+	}
+	if(state == stateNecro3){
+		document.getElementById('Gasteyer').play();
+		var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime=0;
+	var audio = document.getElementById("Thomas");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('myaudio').play();
+var audio = document.getElementById("myaudio");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Mountain').play();
+var audio = document.getElementById("Mountain");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Ruins').play();
+var audio = document.getElementById("Ruins");
+audio.volume = 0.0; audio.currentTime=0;
+document.getElementById('Castle').play();
+var audio = document.getElementById("Castle");
+audio.volume = 1.0; audio.currentTime=0;
+document.getElementById('Ruins').play();
+var audio = document.getElementById("Ruins");
+audio.volume = 0.0; audio.currentTime=0;
+player.currTown ="Mulaney Madlands";
+	}
+
 	clearArrays();
 	
 	if(state > 9){
@@ -169,6 +428,8 @@ function updateScenes(){
 				collision(monsters[j],walls[i]);
 			}
 		}
+
+		
 		//Check Chest Collision
 		for(var i = 0; i < chests.length; i++){
 			if(chests[i].scene == state){
@@ -221,6 +482,7 @@ function updateScenes(){
 			var monIndex = i + 1;
 			collision(monsters[i],player);
 			collision(player,monsters[i]);
+			
 			for(var j = 0; j < monsters.length; j++){
 				if( j != i){
 					collision(monsters[i],monsters[j]);
@@ -293,19 +555,37 @@ function updateScenes(){
 				warps[i].update();
 			}
 		}
-		
-		//HUD Menu
-		ctx.font = "18px Egelston";
-		ctx.fillStyle = "#000";
-		ctx.fillText("HP: "+ player.currHP,10,20);
 	
+		//HUD Menu Canvas hack
+
+		ctx.fillStyle = "green";
+	//	ctx.fillRect(0, 0, 100,40);
+		ctx.fillRect(0, 390, gameArea.canvas.width,100);
+		ctx.fillStyle = "green";
+	//	ctx.fillRect(450, 0, 442, 40);
+		ctx.font = "10px Egelston";
+		ctx.fillStyle = "#000";
+	//	ctx.fillText("HP: "+ player.currHP,0,10);
+		ctx.fillText("Your HP: ",0,400);
+		ctx.fillText("x"+player.currHP, 0,415);
+		//ctx.fillText("Eggs:"+gold,0,10);
+
+
 		
+		ctx.font = "10px Egelston";
+		ctx.fillStyle = "#000";
+		//ctx.fillText("Location:",450,10);
+		ctx.fillText("Location:",450,400);
+	//	ctx.fillText(player.currTown,450,30);
+		ctx.fillText(player.currTown,450,415);
+
 		//Dialogue box
 		if(player.inDialogue){
-			ctx.fillStyle = "rgba(255,255,255,0.6)";
-			ctx.fillRect(0, 0, gameArea.canvas.width, 100);
-			ctx.font = "14px Egelston";
-			ctx.fillStyle = "#000";
+			ctx.fillStyle = "transparent";
+			ctx.fillRect(0, 0, gameArea.canvas.width, 70);
+			ctx.font = "normal 14px Egelston";
+			ctx.fillStyle = "white";
+	
 			if(ctx.measureText(diaLine).width > ctx.canvas.width){
 				diaLine2 = "";
 				while(ctx.measureText(diaLine).width > ctx.canvas.width){
@@ -313,14 +593,21 @@ function updateScenes(){
 					diaLine = diaLine.substring(0, diaLine.lastIndexOf(" "));
 				}
 			}else{
-				ctx.fillText(diaLine,20,20);
-				ctx.fillText(diaLine2,20,60);
+		
+				ctx.fillStyle = "green";
+				ctx.fillRect(0, 0, gameArea.canvas.width, 70);
+				ctx.font = "normal 14px Egelston";
+				ctx.weight="normal";
+				ctx.fillStyle = "white";
+				ctx.fillText(diaLine,0,20);
+				ctx.fillText(diaLine2,0,80);
 			}
 			for(var i = 0; i < buttons.length; i++){
-				ctx.fillStyle = "rgba(255,255,255,0.6)";
-				ctx.fillRect(0, (i*40+100), gameArea.canvas.width, 40);
-				ctx.font = "14px Egelston";
-				ctx.fillStyle = "#000";
+				//ctx.fillStyle = "rgba(255,255,255,0.6)";
+				ctx.fillStyle = "green";
+				ctx.fillRect(0, (i*40+70), gameArea.canvas.width, 40);
+				ctx.font = "normal 14px Egelston";
+				ctx.fillStyle = "white";
 				ctx.fillText(buttons[i][0],20,(i*40+100));
 			}
 			if(waiting){
@@ -328,6 +615,7 @@ function updateScenes(){
 				cursor.y = buttonIndex * 40 + 80;
 				cursor.visible = true;
 			}else{
+				
 				cursor.visible = false;
 			}
 		}
@@ -351,6 +639,7 @@ function updateScenes(){
 				case stateGameWon:
 					updateScene_gameWon();
 					break;
+			
 			default:
 				updateScene_startMenu();
 		}
@@ -392,13 +681,13 @@ if(type = "Mountain"){
 function spawnMonsters(){
 	if(state < 38){
 		var type = "Forest";
-		var rdm = 4;
+var rdm=2;
 		if(state > 30){
 			type = "Mountain";
-			var rdm = 6;
+			var rdm =2;
 		}else if (state > 20){
 			type = "Mountain";
-			var rdm = 10;
+			var rdm =4;
 		}
 
 	
@@ -423,12 +712,12 @@ function spawnMonsters(){
 	}else{
 		monsters.push(assignMon(bestMaster["Queen"]));
 		monsters[0].x = 200;
-		monsters[0].y = 42;
+		monsters[0].y = 62;
 		monsters[0].type="monster";
 
 		monsters.push(assignMon(bestMaster["Ruins"]));
-		monsters[1].x = 50;
-		monsters[1].y = 42;
+		monsters[1].x = 280;
+		monsters[1].y = 282;
 		monsters[1].type="monster";
 		monsters.push(assignMon(bestMaster["Ruins"]));
 		monsters[2].x = 200;
@@ -440,14 +729,10 @@ function spawnMonsters(){
 		monsters[3].y = 182;
 		monsters[3].type="monster";
 
-		monsters.push(assignMon(bestMaster["Ruins"]));
-		monsters[4].x = 240;
-		monsters[4].y = -2;
-		monsters[4].type="monster";
+
 		var audio = document.getElementById("myaudio");
 		audio.volume = 0.0; audio.currentTime = 0;
-		var audio = document.getElementById("Thomas");
-		audio.volume = 1.0; audio.currentTime = 0;
+
 		var audio = document.getElementById("Mountain");
 		audio.volume = 0.0; audio.currentTime = 0;
 

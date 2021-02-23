@@ -8,7 +8,7 @@ function textParticle(x, y, string, color, targetW){
 	this.expiry = 20;
 	this.type = "textParticle";
 	this.update = function() {
-        ctx.font = "18px Egelston";
+        ctx.font = "normal 18px Egelston";
 		ctx.fillStyle = this.color;
 		ctx.fillText(this.string, this.x, this.y);
 		this.expiry--;

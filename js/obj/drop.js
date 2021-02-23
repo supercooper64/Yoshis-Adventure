@@ -34,10 +34,12 @@ function drop(x, y, type, value){
 			document.getElementById('coin').play();
 			var audio = document.getElementById("coin");
 		audio.volume = 1.0; audio.currentTime = 0;
+		
 		}else{
 			document.getElementById('allcoin').play();
 			var audio = document.getElementById("allcoin");
 		audio.volume = 1.0; audio.currentTime = 0;
+
 			 player.currHP += this.value;
 			if(player.currHP > player.maxHP){
 				player.currHP += this.value;

@@ -43,7 +43,15 @@ function collision(r1, r2){
 				}else{
 					hitValue = r2.value;
 				}
-	
+				var audio = document.getElementById("ow");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('ow').play();
+					var audio = document.getElementById("scream");
+					audio.volume = 0.0; audio.currentTime = 0;
+					var audio = document.getElementById("throw");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('throw').play();
+						document.getElementById('scream').play();
 				sfx.src = "vc_yoshi_missfoot02.wav";
 				sfx.play();
 				if(player.equippedArmor.value >= hitValue){
@@ -62,16 +70,52 @@ function collision(r1, r2){
 				}, 3000);
 				//Check if player hp is 0 game over
 				if(player.currHP <= 0){
+					ctx.beginPath();
+					ctx.rect(0, 0, 9999, 9999);
+					ctx.fillStyle = "rgb(207, 192, 107)";
+					ctx.fill();
 					player.canMove = false;
 					var audio = document.getElementById("myaudio");
 					audio.volume = 0.0; audio.currentTime = 0;
 					sfx.src = "Baby Einstein Butterfly Gone SFX.mp3";
 					sfx.play();
-					var audio = new Audio('Yoshi Death.wav');
-					audio.play();
+	player.currHP=0;
+					document.getElementById('yoshi death').play();
+					var audio = document.getElementById("yoshi death");
+					audio.volume = 1.0; audio.currentTime=0;
 					var audio = document.getElementById("Thomas");
 					audio.volume = 0.0; audio.currentTime = 0;
 					//GO Sequence
+					ctx.beginPath();
+					ctx.rect(0, 0, 9999, 9999);
+					ctx.fillStyle = "rgb(207, 192, 107)";
+					ctx.fill();
+					var audio = document.getElementById("myaudio");
+					audio.volume = 0.0; audio.currentTime = 0;
+			
+					var audio = document.getElementById("menu");
+					audio.volume = 0.0; audio.currentTime = 0;
+					var audio = document.getElementById("Thomas");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("Mountain");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("Gasteyer");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("Ruins");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("Town");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("Castle");
+				audio.volume = 0.0; audio.currentTime = 0;
+				var audio = document.getElementById("ow");
+				audio.volume = 0.0; audio.currentTime = 0;
+					document.getElementById('ow').play();
+					var audio = document.getElementById("scream");
+					audio.volume = 0.0; audio.currentTime = 0;
+					var audio = document.getElementById("throw");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('throw').play();
+						document.getElementById('scream').play();
 					gameOver();
 					setTimeout(function(){ window.location.replace("Game Over.html");}, 5000);
 				}

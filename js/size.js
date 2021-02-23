@@ -5,7 +5,7 @@ for sizing instructions when the screen loads or is resized.
 
 */
 
-var tileSize = 20;
+var tileSize = 240;
 
 $(document).ready(function(){
 	resize();

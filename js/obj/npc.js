@@ -118,6 +118,7 @@ function npc(width, height, x, y, moveType, diaType, script, scene, image, defDi
 		xhttp.open("GET", "http://127.0.0.1:8080/dia/"+this.script+".txt", true);
 		xhttp.send(); */
 	}
+	
 	//Loads dialogue
 	this.dialogue = diaNPC[script].split('\n');
 	//jQuery.get('http://127.0.0.1:8080/dia/'+script+'.txt', function(data) {

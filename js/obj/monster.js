@@ -8,7 +8,7 @@ function monster(value, width, height, moveType, maxHp, image){
 	this.h = height;
 	this.dirX = 0;
 	this.dirY = 0;
-	this.speed = 2;
+	this.speed = 4;
 	this.x = 0;
 	this.y = 0;
 	this.nx = 0;

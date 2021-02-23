@@ -1,6 +1,6 @@
 function attack(thisChar){
-	
-	var range = 52;
+
+	var range = 16;
 	var playerCX = player.x + (player.w/2);
 	var playerCY = player.y + (player.h/2);
 	
@@ -35,6 +35,7 @@ function attack(thisChar){
 			audio.volume = 1.0; audio.currentTime = 0;
 				document.getElementById('scream').play();
 				gold += 2;
+		
 				player.currHP+=10;
 				var audio = document.getElementById("throw");
 				audio.volume = 0.0; audio.currentTime = 0;
@@ -56,7 +57,7 @@ function attack(thisChar){
 			}else{
 				var audio = document.getElementById("myaudio");
 				audio.volume = 0.0; audio.currentTime = 0;
-
+	
 				var audio = document.getElementById("menu");
 				audio.volume = 0.0; audio.currentTime = 0;
 		

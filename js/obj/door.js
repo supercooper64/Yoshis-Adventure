@@ -17,7 +17,7 @@ function door(x, y, w, h, scene){
 	this.opened = false;
 	this.diaCounter = 0;
 
-	this.dialogue = ["It's locked. In some places, talk to Tutorial Yoshi about opening this door."];
+	this.dialogue = ["It's locked. In some places, talk to Yabe Yoscheinwald about opening this door."];
 	//this.script = script;
 	this.update = function() {
 	
@@ -34,14 +34,20 @@ function door(x, y, w, h, scene){
 	this.checkLock = function(){
 
 		if(!this.opened){
-			for(var i = 0; i < inventory.length; i++){
+			gameArea.clear();
+			for(var i = 0; i < inventory.length; i++)
+			{
 				if(inventory[i].name == "Key"){
 					this.dialogue[0] = "Key activated!";
 					this.opened = true;
+					gameArea.clear();
 					document.getElementById('key').play();
 					var audio = document.getElementById("key");
 				audio.volume = 1.0; audio.currentTime = 0;
-					inventory[i].useCureItem();
+				document.getElementById('note').play();
+				var audio = document.getElementById("note");
+			audio.volume = 0.0; audio.currentTime=0;
+				//	inventory[i].useCureItem();
 				}
 			}
 		}

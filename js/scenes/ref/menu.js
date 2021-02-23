@@ -12,9 +12,9 @@ const menu0 = [
 	"Items",
 	"Abilities",
 	"Powerups",
-	"Lockets and Keys",
-	"Back (or press Q to exit)",
-	"Goodbye"
+	"Keys",
+	"Back to Game",
+	"Quit"
 ]
 
 var currMenu = [];
@@ -23,15 +23,23 @@ var cursorX = 0;
 var cursorY = (menuIndex*40 + 100)-17;
 
 function updateScene_menu(){
-	
-	ctx.font = "28px Egelston";
+	ctx.beginPath();
+	ctx.rect(0, 0, 9999, 9999);
+	ctx.fillStyle = "rgb(207, 192, 107)";
+	ctx.fill();
+	ctx.font = "20px Egelston";
 	ctx.fillStyle = "black";
-	ctx.fillText("Menu",220,20);
+	ctx.fillText("Menu",200,20);
 
 	ctx.font = "13px Egelston";
-	ctx.fillText("Name: "+player.name,10,100);
-	ctx.fillText("HP: "+player.currHP+"/"+player.maxHP,  10,140);
-	ctx.fillText("Yoshi Egg Meter: "+gold,10,180);
+	ctx.fillText("Name: ",10,80);
+	ctx.fillText(player.name,10,100);
+	ctx.fillText("HP: ",  10,140);
+	ctx.fillText(player.currHP+"/"+player.maxHP,  10,160);
+	ctx.fillText("Yoshi Eggs Left:",10,200);
+	ctx.fillText(gold,10,220);
+	ctx.fillText("Location:",10,260);
+	ctx.fillText(player.currTown,10,280);
 	//ctx.fillText(player.EXP,50,220);
 
 	if(menuLevel == 0){

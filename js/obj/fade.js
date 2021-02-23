@@ -13,11 +13,12 @@ function fade(){
         ctx.fillRect(this.x, this.y, this.w, this.h);
     }
 	this.fadeOut = function() {
-		
+
 	}
 	this.fadeIn = function() {
 		setInterval(function(){
 			this.alphaValue -= 0.1;
+		
 		}, 3000);
 	}
 }
