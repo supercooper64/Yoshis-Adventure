@@ -35,7 +35,7 @@ function updateScene_menu(){
 	ctx.fillText("Name: ",10,80);
 	ctx.fillText(player.name,10,100);
 	ctx.fillText("HP: ",  10,140);
-	ctx.fillText(player.currHP+"/"+player.maxHP,  10,160);
+	ctx.fillText(player.currHP,  10,160);
 	ctx.fillText("Yoshi Eggs Left:",10,200);
 	ctx.fillText(gold,10,220);
 	ctx.fillText("Location:",10,260);
