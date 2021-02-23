@@ -192,8 +192,23 @@ function checkMenu(){
 			document.getElementById('byebye').play();
 			var audio = document.getElementById("byebye");
 		audio.volume = 1.0; audio.currentTime = 0;
-				var audio = document.getElementById("myaudio");
-				audio.volume = 0.0;
+		var audio = document.getElementById("myaudio");
+		audio.volume = 0.0; audio.currentTime = 0;
+
+		var audio = document.getElementById("menu");
+		audio.volume = 0.0; audio.currentTime = 0;
+		var audio = document.getElementById("Thomas");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("Mountain");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("Gasteyer");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("Ruins");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("Town");
+	audio.volume = 0.0; audio.currentTime = 0;
+	var audio = document.getElementById("Castle");
+	audio.volume = 0.0; audio.currentTime = 0;
 					setTimeout(function(){ window.location.replace("Title Screen.html");}, 1000);
 			scrollOffset = 0;
 			cursor.visible = false;
