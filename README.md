@@ -2,6 +2,26 @@
 
 A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game, featuring music from Xuanyuan Jian Canwaizhuan, Legend of Zelda: A Link Between Worlds, Treasure Hunter G, Star Wars Episode VII: A New Hope, Romancing Saga 2, The Beatles, LINE Cookie Run, Sonic Pinball Party, Garfield: Caught in the Act, and Mamorukun Curse.
 
+#  Characters featured
+Playable:
+
+- Yoshi
+
+Non playable:
+
+- Yoehler Poehlerberg (appears only in Rest areas in Swanson Sewers and Mulaney Madlands, Gasteyer Garden and Yoshyrule)
+
+- Yoshneese (appears only in Rest areas in Swanson Sewers and Mulaney Madlands, Gasteyer Garden and Yoshyrule)
+
+- Yabe Yoscheinwald (appears in all areas except Swanson Sewers' secret room, Princess Zora's location and Downerhausen's Castle)
+
+- Princess Zora (only appears in the ending of this game)
+
+- Dratchy Downerhausen (only appears in Downerhausen's Castle)
+
+- Snakes (only appears in Swanson Sewers and Mulaney Madlands)
+
+- Zombie Horses (only appears in Fey Forest)
 # What's new in Version 2.0.3?
 
 - Fixed a glitch where the player would not get hurt from the boss, Dratchy Downerhausen.
@@ -131,3 +151,4 @@ A Zelda-ish Adventure Game starring Yoshi, and the ROM hack of HTML5 Game, featu
 - Sarah was supposed to be the name for Zora. However, it was changed to avoid confusion with some people that are named that.
 
 - Prior to Version 2.0.3, the monster had no name. However, two names were planned: Poehlerberg (parody of Amy Poehler and Andy Samberg's last names) and Ghastly Gemini (name parodied reference to the SNL skit, Gemini's Twin), before being called Dratchy Downerhausen in the final, with the Poehler/Samberg name parody being merged as Purple Yoshi's "real" name in the final.
+
