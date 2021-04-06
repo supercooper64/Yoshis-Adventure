@@ -38,10 +38,12 @@ function newGame(){
 	var audio = document.getElementById("menu");
 	audio.volume = 0.0; audio.currentTime = 0;
 
-	var audio = new Audio('music/yoshi1.wav');
-	audio.play();
-	var audio = new Audio('nsmbwiiStartLevel.wav');
-	audio.play();
+	var audio = document.getElementById("yoshi start");
+					audio.volume = 1.0; audio.currentTime = 0;
+					var audio = document.getElementById("start");
+					audio.volume = 1.0; audio.currentTime = 0;
+						document.getElementById('yoshi start').play();
+						document.getElementById('start').play();
 	player.currHP = 999;
 	//For this game
 	$("#mainCanvas").fadeOut(fadeTime, function(){

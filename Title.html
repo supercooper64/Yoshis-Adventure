@@ -84,8 +84,8 @@ color:rgb(0, 0, 0);
 		
 	</body>
 </html>
-<audio id="shine" src="smsunshine_shine_appears.wav" preload="auto"></audio>
-<audio src = "Battle 2 (Xuanyuan Jian Canwaizhuan, SMW Soundfont).wav"  loop id = "myaudio" autoplay></audio>
+<audio id="shine" src="Capcom Logo.mp3" preload="auto"></audio>
+<audio src = "df"  loop id = "myaudio" autoplay></audio>
 <Script>
 	var audio = document.getElementById("myaudio");
 	audio.volume = 0.0; audio.currentTime = 0;
@@ -94,6 +94,9 @@ color:rgb(0, 0, 0);
 		var audio = document.getElementById("myaudio");
 	audio.volume = 0.0; audio.currentTime = 0;
 	document.getElementById('audiotag1').play();
+	var audio = document.getElementById("shine");
+	audio.volume = 0.0; audio.currentTime = 0;
+	document.getElementById('shine').play();
 	setTimeout(function(){ window.location.replace("Title Screen.html");}, 1000);
 });
 

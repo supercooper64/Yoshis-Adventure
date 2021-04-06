@@ -83,8 +83,15 @@ function updateScene_menu(){
 }
 
 function openMenu(){
-
-
+	var audio = document.getElementById("yoshi start");
+					audio.volume = 0.0; audio.currentTime = 0;
+					var audio = document.getElementById("start");
+					audio.volume = 0.0; audio.currentTime = 0;
+						document.getElementById('yoshi start').play();
+						document.getElementById('start').play();
+	document.getElementById('Kamek').play();
+	var audio = document.getElementById("Kamek");
+audio.volume = 0.0; audio.currentTime = 0;
 	var audio = document.getElementById("menu");
 	audio.volume = 0.0; audio.currentTime = 0;
 		menuLevel = 0;

@@ -162,9 +162,10 @@ audio.volume = 0.0; audio.currentTime=0;
 document.getElementById('Castle').play();
 var audio = document.getElementById("Castle");
 audio.volume = 0.0; audio.currentTime=0;
+player.currTown ="Fey Forest";
 	}
 	if(state == stateWaste1){
-		player.currTown ="Swanson Sewers";
+		player.currTown ="Spivey Sewers";
 		document.getElementById('Gasteyer').play();
 		var audio = document.getElementById("Gasteyer");
 	audio.volume = 0.0; audio.currentTime=0;
@@ -188,7 +189,7 @@ audio.volume = 0.0; audio.currentTime=0;
 
 	}
 	if(state == stateWaste3){
-		player.currTown ="Swanson Sewers";
+		player.currTown ="Spivey Sewers";
 		document.getElementById('Gasteyer').play();
 		var audio = document.getElementById("Gasteyer");
 	audio.volume = 0.0; audio.currentTime=0;
@@ -585,7 +586,7 @@ function updateScenes(){
 			ctx.fillRect(0, 0, gameArea.canvas.width, 70);
 			ctx.font = "normal 14px Egelston";
 			ctx.fillStyle = "white";
-	
+
 			if(ctx.measureText(diaLine).width > ctx.canvas.width){
 				diaLine2 = "";
 				while(ctx.measureText(diaLine).width > ctx.canvas.width){

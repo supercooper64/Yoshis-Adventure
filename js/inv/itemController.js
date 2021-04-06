@@ -62,6 +62,9 @@ function addGold(value){
 	var audio = document.getElementById("found item");
 	audio.volume = 1.0; audio.currentTime = 0;
 		document.getElementById('found item').play();
+		document.getElementById('Kamek').play();
+		var audio = document.getElementById("Kamek");
+	audio.volume = 0.0; audio.currentTime=0;
 				setTimeout(function(){ 		var audio = document.getElementById("ow");
 				audio.volume = 0.0; audio.currentTime = 0;
 					document.getElementById('ow').play();

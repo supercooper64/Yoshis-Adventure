@@ -80,7 +80,9 @@ function dialogue(thisChar){
 					document.getElementById('shell').play(); 
 
 		//If true, then we advance the dialogue.
-	
+		document.getElementById('Kamek').play();
+						var audio = document.getElementById("Kamek");
+					audio.volume = 1.0; audio.currentTime=0;
 		advanceDia(thisChar);
 	}
 	
@@ -98,7 +100,9 @@ function dialogue(thisChar){
 			var audio = document.getElementById("note");
 			audio.volume = 0.0; audio.currentTime = 0;
 		endDialogue(thisChar);
-	
+		document.getElementById('Kamek').play();
+		var audio = document.getElementById("Kamek");
+	audio.volume = 0.0; audio.currentTime=0;
 		document.getElementById('yoshi').play();
 		var audio = document.getElementById("yoshi");
 	audio.volume = 0.0; audio.currentTime=0;
@@ -142,7 +146,9 @@ function advanceDia(thisChar){
 					document.getElementById('found item 2').play();
 					document.getElementById('yoshi').play();
 	
-			
+					document.getElementById('Kamek').play();
+					var audio = document.getElementById("Kamek");
+				audio.volume = 0.0; audio.currentTime=0;
 				
 				
 				var audio = document.getElementById("yoshi yoshi");
@@ -198,6 +204,9 @@ function advanceDia(thisChar){
 					var audio = document.getElementById("shell");
 					audio.volume = 0.0; audio.currentTime = 0;
 						document.getElementById('shell').play(); 
+						document.getElementById('Kamek').play();
+						var audio = document.getElementById("Kamek");
+					audio.volume = 0.0; audio.currentTime=0;
 			thisChar.checkLock();
 		}
 		if(thisChar.type == "npc"){
@@ -213,6 +222,7 @@ function advanceDia(thisChar){
 					var audio = document.getElementById("shell");
 					audio.volume = 0.0; audio.currentTime = 0;
 						document.getElementById('shell').play(); 
+					
 		}
 
 		//If random, gets a random line in the dialogue.
@@ -366,6 +376,9 @@ function endDialogue(thisChar){
 		var audio = document.getElementById("yoshi yaha");
 		audio.volume = 0.0; audio.currentTime = 0;
 			document.getElementById('yoshi yaha').play();
+			document.getElementById('Kamek').play();
+			var audio = document.getElementById("Kamek");
+		audio.volume = 0.0; audio.currentTime=0;
 	player.inDialogue = false;
 	thisChar.inDialogue = false;
 	//Unless the dialogue is instructed to repeat the last line (2)
@@ -443,7 +456,9 @@ function createBtn(thisChar, thisLine){
 	document.getElementById('yoshi').play();
 	var audio = document.getElementById("yoshi");
 audio.volume = 0.0; audio.currentTime=0;
-
+document.getElementById('Kamek').play();
+var audio = document.getElementById("Kamek");
+audio.volume = 0.0; audio.currentTime=0;
 	advanceDia(thisChar);
 }
 //Changes label when input button is pressed.
@@ -479,7 +494,9 @@ function getCallBack(output, index){
 		document.getElementById('yoshi').play();
 		var audio = document.getElementById("yoshi");
 	audio.volume = 1.0; audio.currentTime = 0;
-
+	document.getElementById('Kamek').play();
+	var audio = document.getElementById("Kamek");
+audio.volume = 0.0; audio.currentTime=0;
 		npcs[index].diaCounter--;
 	}
 	waiting = false;
@@ -489,7 +506,9 @@ function getCallBack(output, index){
 					var audio = document.getElementById("note");
 				audio.volume = 1.0; audio.currentTime = 0;
 	buttons=[];
-
+	document.getElementById('Kamek').play();
+	var audio = document.getElementById("Kamek");
+audio.volume = 0.0; audio.currentTime=0;
 	advanceDia(npcs[index]);
 }
 function getCallBackStop(output, index){
