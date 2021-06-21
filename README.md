@@ -136,19 +136,19 @@ Non playable:
 
 - This is the first game to star Yoshi as a protagonist.
 
-- This is the only game where Yoshi has voice clips, but the NPCs that he talks to do not.
+- This is the only game where Yoshi has actual voice clips, but the Tri-Yoshi heroes, as well as Zora, that he talks to do not. Instead, they are replaced with Kamek sfx to simulate dialogue.
 
-- Unlike the main character, the colored Yoshis seen in this game have real names that are name parodies of SNL characters/celebrities.
+- Unlike the main character, the colored Yoshis seen in this game have real names that are name parodies of SNL characters/celebrities, particularly Yoehler Poehlerberg, who is based on the Twitter account SNYoehlerVFX (albeit without VFX or Saturday Night in it).
 
 - Some of these mechanics, such as the addition of Yabe Yoscheinwald as a "Tutorial Yoshi", were later reused or based on in The Wizarding World of Yoshis, the second DJ STUDIO-developed, non-Nintendo licensed game to star Yoshi.
 
 # Pre-release/Unused Content
 
-- Blue Yoshi was supposed to be Yellow Yoshi, but was not added due to the Photoshop paint editor rendering the color incorrect. This also was the case for Black and Pink Yoshi, who were replaced with Purple and Red Yoshi in the final.
+- Blue Yoshi (originally not named Yoshneese) was supposed to be Yellow Yoshi, but was not added due to the Photoshop paint editor rendering the color incorrect. This also was the case for Black and Pink Yoshi, who were replaced with Purple and Red Yoshi in the final. Black and Pink appear in the sequel and the final game, as non playable supporting characters. They are given the names Gillyoshi (parody of Gilly from SNL, name based on DJ STUDIO's AB Tech username) and Yosheanne Yosheanna.
 
 - The game had different sound effects.
 
 - Sarah was supposed to be the name for Zora. However, it was changed to avoid confusion with some people that are named that.
 
-- Prior to Version 2.0.3, the monster had no name. However, two names were planned: Poehlerberg (parody of Amy Poehler and Andy Samberg's last names) and Ghastly Gemini (name parodied reference to the SNL skit, Gemini's Twin), before being called Dratchy Downerhausen in the final, with the Poehler/Samberg name parody being merged as Purple Yoshi's "real" name in the final.
+- Prior to Version 2.0.3, the monster had no name. However, two names were planned: Poehlerberg (parody of Amy Poehler and Andy Samberg's last names) and Ghastly Gemini (name parodied reference to the SNL skit, Gemini's Twin), before being called Dratchy Downerhausen in the final, with the Poehler/Samberg name parody being merged as the last name for Yoehler (the purple Yoshi) in the final.
 
