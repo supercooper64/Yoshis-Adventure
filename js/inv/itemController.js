@@ -25,7 +25,6 @@ function startInventory(){
 	//Builds starting inventory.
 	inventory.push(assignItem(invMaster["Potion"]));
 	inventory[0].qty = 5;
-	inventory.push(assignItem(invMaster["Key"]));
 	inventory.push(assignItem(invMaster["Smash"]));
 	console.log("Inventory Built");
 }
