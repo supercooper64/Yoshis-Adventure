@@ -86,6 +86,7 @@ span{
                 <a href="javascript:play_credits_sound();"><h1>Credits</h1></a>
                 <a href="javascript:play_faq_sound();"><h1>Frequently Asked Questions</h1></a>
                 <a href="javascript:play_next_sound();"><h1> Contact Us</h1></a>
+        <a href="javascript:play_collection_sound();"><h1>Back to Collection</h1> </a> 
                 <a href="javascript:play_site_sound();"><h1> Go to DJ STUDIO's Website</h1></a>
 				<span>This game and code  &copy; 2019 DJ STUDIO.</span> <br> <br>
 				<span> Music used in this game &copy; Nintendo, Lucasfilm, Square Enix,  <br> THQ, Paon, SOFTSTAR ENTERTAINMENT INC.</span>
@@ -132,8 +133,15 @@ span{
                                              document.getElementById('audiotag3').play();
                                              var audio = document.getElementById("myaudio");
                     audio.volume = 0.0;
-                                             setTimeout(function(){ window.location.replace("../Index.html");}, 1000);
+                                             setTimeout(function(){ window.location.replace("https://welcome-to-my-world.glitch.me/Login.html");}, 1000);
                                            }
+                            function play_collection_sound() {
+                         var audio = document.getElementById("myaudio");
+                         audio.volume = 0.0; audio.currentTime =0;
+                        document.getElementById('audiotag3').play();
+                        //setTimeout(function(){ window.location.replace("../Login.html");}, 1000);
+                        setTimeout(function(){ window.location.replace("https://yoshis-adventure-collection.glitch.me/Yoshis Adventure (2018).html");}, 1000);
+                      }
 </Script>
 	
 <!--
